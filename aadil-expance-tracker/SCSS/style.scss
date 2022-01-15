@@ -1,0 +1,223 @@
+// make a container and center it. done.
+// make heading in the center of the container. done.
+// add your balance text. done.
+// make income/expance box in the center. done.
+// make a varticle line between income and expance. done.
+// make history list below that. 
+// make a form saying new transaction.
+// make an input box + value means incom, - value means expance.
+// add submit button.
+
+
+@import url('https://fonts.googleapis.com/css?family=Lato&display=swap');
+
+// common variables.
+$violet-color: #9c88ff;
+$my-font-family: 'Lato', sans-serif;
+$green-color: #2ecc71;
+$red-color: #c0392b;
+$off-white-color: #f7f7f7;
+$off-white-color-2: #bbb;
+$white-color: #fff;
+$black-color: #333;
+$black-color-with-opacity: rgba(0, 0, 0, 0.12);
+$expance-tracker-container-width: 350px;
+$list-item-height: 40px;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: $my-font-family;
+    background-color: $off-white-color;
+    padding-bottom: 2rem;
+}
+
+
+// common mixins
+@mixin border($color) {
+    border: 1px solid $color;
+}
+
+@mixin flex-helper ($jc, $ai) {
+    display: flex;
+    justify-content: $jc;
+    align-items: $ai;
+}
+
+// common js classes
+.red-times-box {
+    background: $red-color;
+    // display: inline-block;
+    height: cacl(#{$list-item-height} - 10px);
+    width: 30px;
+    @include flex-helper(center, center);
+}
+
+.red-background {
+    background: $red-color;
+}
+
+.green-background {
+    background: $green-color;
+}
+
+// command tag styles.
+li {
+    list-style: none;
+}
+
+button {
+    display: block;
+    text-align: center;
+    padding: .3rem 3rem;
+    margin-top: 1rem;
+    height: $list-item-height;
+    background: $violet-color;
+    width: 100%;
+    border: none;
+    color: $white-color;
+    font-size: 1rem;
+    &:hover {
+        cursor: pointer;
+    }
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 3rem;
+    font-size: 1.6rem;
+    font-weight: 700;
+}
+
+p {
+    font-weight: 900;
+    font-size: 1.2rem;
+    text-transform: capitalize;
+}
+
+input {
+    display: block;
+    margin: .5rem 0rem;
+    width: 100%;
+    height: $list-item-height;
+    border-radius: 3px;
+    border: $black-color-with-opacity;
+    background-color: $white-color;
+    padding: .4rem;
+    font-size: 1rem;
+}
+// main style starts from here.
+
+.expance-tracker-container {
+    width: $expance-tracker-container-width;
+    margin: auto;
+    margin-top: 1rem;
+    // @include border(red);
+}
+
+.balance-text {
+    text-transform: uppercase;
+    font-size: 1rem;
+    .balance-total-text {
+        display: block;
+        font-size: 2.1rem;
+        font-weight: 900;
+    }
+}
+
+.income-expance-container {
+    background: $white-color;
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+    width: 100%;
+    // @include border(red);
+    text-align: center;
+    @include flex-helper(space-evenly, center);
+    box-shadow: 4px 4px 4px $black-color-with-opacity, -4px -4px 4px $black-color-with-opacity;
+    padding: 1.5rem 2rem 1.5rem 2rem;
+    .income, .expance {
+        font-size: 1.3rem;
+    }
+    .income {
+        color: $green-color;
+    }
+    .expance {
+        color: $red-color;
+    }
+
+    .income-expance-heading {
+        display: block;
+        color: $black-color;
+        text-transform: uppercase;
+        font-size: 1.1rem;
+        font-weight: 700;
+        margin-bottom: .4rem;
+        color: $black-color;
+    }
+    .verticle-line {
+        width: 1px;
+        height: 60px;
+        background: $black-color-with-opacity;
+    }
+}
+
+.hr-line {
+    height: 1px;
+    background: $black-color-with-opacity;
+    display: block;
+    width: 100%;
+    margin: .8rem 0;
+}
+
+.history-list {
+    width: 100%;
+    font-size: 1.1rem;
+    .history-list-item {
+        font-weight: normal;
+        @include flex-helper(space-between, center);
+        margin: .4rem 0;
+        box-shadow: 4px 4px 4px $black-color-with-opacity, -4px -4px 4px $black-color-with-opacity;
+        width: 100%;
+        height: $list-item-height;
+        padding-left: .5rem;
+        position: relative; 
+
+        &:hover .history-list-time-icon{
+            opacity: 1;
+        }
+    }
+    .history-list-amount {
+        vertical-align: middle;
+        @include flex-helper(center, center);
+    }
+    .history-list-time-icon {
+        height: calc(#{$list-item-height} - 12px);
+        width: 25px;
+        background: $red-color;
+        text-align: center;
+        color: $white-color;
+        position: absolute;
+        left: -25px;
+        opacity: 0;
+        transition-property: opacity;
+        transition-timing-function: ease-in;
+        transition-duration: .3s;
+        &:hover {
+            opacity: 1;
+            cursor: pointer;
+        }
+    }
+    .history-list-transection-color {
+        display: inline-block;
+        margin-left: .5rem;
+        width: 5px;
+        height: $list-item-height;
+    }
+}
+
+.new-transection {
+    margin-top: 3rem;
+}

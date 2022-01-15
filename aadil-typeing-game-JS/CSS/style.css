@@ -1,0 +1,171 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100vh;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  background-color: #34495e;
+}
+
+button {
+  display: block;
+  text-align: center;
+  padding: .3rem 3rem;
+  margin-top: 1rem;
+  background: #fff;
+  border: none;
+  font-size: 1rem;
+  border-radius: 5px;
+}
+
+button:hover {
+  cursor: pointer;
+  background: rgba(255, 255, 255, 0.9);
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 3rem;
+  font-size: 1.6rem;
+  font-weight: 700;
+}
+
+p {
+  font-weight: 900;
+  font-size: 1.2rem;
+  text-transform: capitalize;
+}
+
+.settings-form {
+  width: 100%;
+  height: 9vh;
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  top: 0;
+  background: #2c3e50;
+}
+
+.settings-form label {
+  display: inline-block;
+  margin-right: .5rem;
+  color: #fff;
+  font-size: 1.1rem;
+}
+
+.settings-form select {
+  width: 200px;
+  background: #a7c5e3;
+  text-align: left;
+  padding: .4rem 0;
+  padding-left: .4rem;
+}
+
+.game-play-container {
+  width: 500px;
+  height: 250px;
+  -webkit-box-shadow: 4px 4px 3px rgba(0, 0, 0, 0.3), -4px -4px 3px rgba(0, 0, 0, 0.3);
+          box-shadow: 4px 4px 3px rgba(0, 0, 0, 0.3), -4px -4px 3px rgba(0, 0, 0, 0.3);
+  color: #fff;
+}
+
+.game-play-container .game-playing {
+  display: block;
+}
+
+.game-play-container .game-playing .game-statistics-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 90%;
+  margin: auto;
+  margin-top: .9rem;
+}
+
+.game-play-container .game-playing .game-heading {
+  width: 90%;
+  margin: auto;
+  margin-top: 1rem;
+  background: #2c3e50;
+  padding: .5rem .9rem;
+}
+
+.game-play-container .game-playing .game-instruction {
+  margin-top: 1.5rem;
+  margin-bottom: .5rem;
+  font-weight: lighter;
+  font-size: .8rem;
+  text-align: center;
+}
+
+.game-play-container .game-playing #game-word {
+  margin-bottom: 0.5rem;
+  height: 30px;
+}
+
+.game-play-container .game-playing #user-word-input {
+  border: 1px solid black;
+  width: 60%;
+  padding: .6rem 1.6rem;
+  border-radius: 5px;
+  font-size: 1.1rem;
+  display: block;
+  margin: auto;
+}
+
+.game-play-container .game-over {
+  display: none;
+}
+
+.game-play-container .game-over .game-over-messege {
+  text-align: center;
+  margin-top: 5rem;
+  font-size: 1.8rem;
+}
+
+.game-play-container .game-over .final-score {
+  margin-top: 1rem;
+  font-size: .8rem;
+  font-weight: lighter;
+  text-align: center;
+}
+
+.game-play-container .game-over .game-reload-btn {
+  margin: auto;
+  margin-top: 1rem;
+  padding: .3rem 1rem;
+}
+
+.setting-btn {
+  position: absolute;
+  bottom: 1.5rem;
+  left: 1.5rem;
+  padding: .3rem .9rem;
+}
+/*# sourceMappingURL=style.css.map */

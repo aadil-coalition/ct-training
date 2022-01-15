@@ -1,0 +1,131 @@
+// make show rule button on the left 
+// make background blue.
+// set the game area in the middle.
+
+// common variables.
+
+$sky-blue-color: #0095dd;
+$white-color: #fff;
+$black-color: #000;
+$font-family: Arial, Helvetica, sans-serif;
+$grey-color: #333;
+$grey-color-1:#222;
+
+// globle styling
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+body {
+  background: $sky-blue-color;
+  font-family: $font-family;
+}
+
+// common mixins
+@mixin flex-helper($jc, $ai: center) {
+  display: flex;
+  justify-content: $jc;
+  align-items: $ai;
+}
+
+@mixin border-helper($color) {
+  border: 1px solid $color;
+}
+
+// common element styling
+h1, p, h2 {
+  color: white; 
+  font-size: 3rem;
+  margin: auto;
+  text-align: center;
+  // padding: 1rem 1.2rem;
+}
+
+p {
+  font-size: 1.5rem;
+}
+
+h2 {
+  font-size: 2rem;
+}
+
+button {
+  background-color: black;
+  padding: .5rem .9rem;
+  border-radius: 5px;
+  display: inline-block;
+  color: $white-color;
+  border: none;
+  font-size: 1rem;
+  text-transform: capitalize;
+
+  &:hover {
+    cursor: pointer;
+    background: $grey-color;
+  }
+}
+
+//  main style starts from here.
+header {
+  @include flex-helper(left, center);
+  height: 10vh;
+  margin-top: 1.5rem;
+  position: relative;
+
+  .show-rule-btn {
+    position: absolute;
+    left: 5rem;
+  }  
+}
+
+.left-slider {
+  height: 100vh;
+  width: 20%;
+  background: $grey-color;
+  padding: 1rem;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: translateX(-100%);
+  transition: transform;
+  transition-duration: 1s;
+  transition-delay: ease-in-out;
+  h2 {
+    text-transform: capitalize;
+    text-align: left;
+    font-size: 1.5rem;
+    margin: 1rem;
+    margin-bottom: 2rem;
+  }
+  p {
+    font-size: 1rem;
+    margin: .5rem;
+    text-align: left;
+    line-height: 1.4rem;
+  }
+  button {
+    margin-top: 1rem;
+  }
+}
+
+canvas.game-area {
+  margin: auto;
+  display: block;
+  position: fixed;
+  left: calc((100vw - 900px)/2);
+  bottom: 0;
+  border-radius: 8px;
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+  margin-top: 2rem;
+  width: 900px;
+  height: 80vh;
+  background: $white-color;
+  border-radius: 6px;
+}
+
+
+

@@ -1,0 +1,165 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+body {
+  font-family: Arial, Helvetica, sans-serif; }
+
+a {
+  text-decoration: none;
+  color: #000;
+  display: inline-block; }
+
+h1, h2, h3, h4 {
+  margin: auto;
+  text-align: center; }
+
+li {
+  list-style: none; }
+
+input {
+  display: inline-block;
+  border: none;
+  text-align: center;
+  padding: .8rem 1.4rem;
+  border-radius: 5px; }
+  input:focus {
+    outline: none; }
+
+button {
+  display: inline-block;
+  border: none;
+  text-align: center;
+  padding: .4rem .8rem;
+  border-radius: 12px;
+  text-transform: capitalize;
+  background: #8d56fd;
+  color: #fff;
+  transition-property: transform;
+  transition-duration: .4s;
+  transition-timing-function: ease-in; }
+  button:hover {
+    cursor: pointer;
+    transform: scale(0.95, 0.95); }
+
+.search-container {
+  height: 45vh;
+  width: 100%;
+  background: url("https://images.unsplash.com/photo-1510915361894-db8b60106cb1?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80");
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative; }
+  .search-container::after {
+    content: '';
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: #000;
+    opacity: .5; }
+
+form {
+  display: block;
+  width: 60%;
+  z-index: 1; }
+  form legend {
+    text-align: center;
+    margin-bottom: 2rem;
+    font-size: 2rem;
+    font-weight: 700;
+    color: #fff; }
+  form feildset {
+    display: block;
+    text-align: center;
+    position: relative; }
+  form input[type="submit"] {
+    background: #e056fd;
+    color: #fff;
+    border-radius: 30px;
+    position: absolute;
+    right: calc((100% - 60%)/2);
+    font-size: 1.1rem;
+    height: 45px;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    margin-top: 2.5px;
+    text-transform: capitalize;
+    margin-right: 2.5px;
+    transition-property: trasform;
+    transition-timing-function: ease-in; }
+    form input[type="submit"]:hover {
+      cursor: pointer; }
+    form input[type="submit"]:active {
+      transform: scale(0.95, 0.95); }
+  form .search-input-box {
+    text-align: left;
+    font-size: 1rem;
+    width: 60%;
+    height: 50px;
+    display: inline-block;
+    margin: auto;
+    border-radius: 30px; }
+
+.songs-list-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative; }
+  .songs-list-container .loader {
+    position: absolute;
+    margin: auto;
+    width: 20%;
+    top: 20%;
+    display: none; }
+  .songs-list-container .lyrics-container {
+    display: none;
+    width: 100%;
+    height: 80vh;
+    position: absolute;
+    top: 0;
+    left: 0; }
+  .songs-list-container .individual-lyrics {
+    text-align: left;
+    margin: auto;
+    width: 50%; }
+  .songs-list-container .lyrics-title {
+    text-align: left;
+    width: 50%;
+    font-weight: 200;
+    margin-bottom: 2rem;
+    margin-top: 2rem; }
+  .songs-list-container .lyrics-back {
+    margin-top: 2rem;
+    margin-left: 50%;
+    padding: .8rem 1.5rem; }
+
+.search-results-notice {
+  font-weight: 200;
+  font-size: 1.1rem;
+  text-transform: capitalize;
+  margin-top: 2rem; }
+
+.song-list {
+  margin-top: 2rem;
+  text-align: center;
+  width: 40%;
+  background: #fff; }
+  .song-list .song-list-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: .4rem; }
+  .song-list .artist-name {
+    font-weight: 600;
+    text-transform: capitalize; }
+  .song-list .song-name {
+    font-weight: normal; }
+
+/*# sourceMappingURL=style.css.map */

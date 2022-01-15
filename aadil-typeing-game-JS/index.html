@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>typing game</title>
+    <!-- getting fonts from font awsome. -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css"
+      integrity="sha256-+N4/V/SbAFiW1MPBCXnfnP9QSN3+Keu+NlB+0ev/YKQ="
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="CSS\style.css">
+</head>
+<body>
+    
+    <form action="#" class="settings-form">
+        <label for="difficulty">Difficulty</label>
+        <select name="game-difficulty" id="difficulty">
+            <option class="game-difficulty-option" value="Easy">Easy</option>
+            <option class="game-difficulty-option" value="Medium">Medium</option>
+            <option class="game-difficulty-option" value="Hard">Hard</option>
+        </select>
+    </form>
+
+    <div class="game-play-container">
+        <div class="game-playing">
+            <h2 class="game-heading">👩‍💻 Speed Typer 👨‍💻</h2>
+            <div class="game-statistics-container">
+                <span id="game-time-left">Time left: <span></span>s</span>
+                <span id="game-score">Score: <span>0</span> </span>
+            </div>
+
+            <p class="game-instruction"> Type the following: </p>
+            <h2 id="game-word"></h2>
+            <input id="user-word-input" type="text" placeholder="Type the word here..."/>
+        </div>
+        <div class="game-over">
+            <p class="game-over-messege">Time ran out</p>
+            <p class="final-score"> Your final score is <span class="final-score-number">0</span></p>
+            <button class="game-reload-btn">Reload</button>
+        </div>
+    </div>
+
+    <button class="setting-btn"><i class="fas fa-cog"></i></button>
+    <script src="app.js"></script>
+</body>
+</html>

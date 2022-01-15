@@ -1,0 +1,213 @@
+// common variables.
+$my-font: Verdana, Geneva, Tahoma, sans-serif;
+$brown-color: #2d2013;
+$light-blue-color: #4992d3;
+$black-color: #000;
+$black-color-with-opacity: rgba(0, 0, 0, 0.3);
+$black-color-with-opacity-1: rgba(0, 0, 0, 0.7);
+$white-color: #fff;
+$orange-color: #e09850;
+$white-color-2: #dedede;
+$grey-color: #e7e7e7;
+$single-food-image-height: 350px;
+$single-food-image-width: 300px;
+$multiple-food-containerr-width: 900px;
+// globle style.
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: $my-font;
+    background: $brown-color;
+    color: $white-color;
+}
+
+// common mixin.
+@mixin flex-helper($jc, $ai) {
+    display: flex;
+    justify-content: $jc;
+    align-items: $ai;
+}
+
+// common element styling
+
+h1 {
+    text-align: center;
+    margin: auto;
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+}
+
+p {
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+ul {
+    width: 500px;
+    margin: auto;
+    padding-bottom: 2rem;
+    text-align: center;
+}
+
+li {
+    list-style: none;
+    display: inline-block;
+    background: $white-color;
+    color: $black-color;
+    padding: .3rem;
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: .8rem;
+    margin: .2rem;
+}
+
+span:hover {
+    cursor: pointer;
+}
+form {
+    width: 500px;
+    height: 200px;
+    margin: auto;
+    position: relative;
+    display: grid;
+    legend {
+        text-align: center;
+        font-size: 1.9rem;
+        font-weight: bolder;
+        margin-top: 1rem;
+        margin-bottom: -3rem;
+        grid-column-start: 1;
+        grid-column-end: 10;
+    }
+
+    input {
+        height: 35px;
+        display: inline-block;
+        grid-column-start: 1;
+        grid-column-end: 8;
+
+    }
+}
+
+// main style starts from here
+
+.search-messege {
+    margin-top: -4rem;
+    visibility: hidden;
+}
+.search-btn {
+    height: 35px;
+    display: inline-block;
+    grid-column-start: 8;
+    grid-column-end: 9;
+    width: 35px;
+    position: relative;
+    right: 30px;
+    background: $grey-color;
+    color: $black-color;
+    line-height: 35px;
+    vertical-align: center;
+    text-align: center;
+    border-radius: 5px;
+}
+.random-food-btn {
+    height: 35px;
+    display: inline-block;
+    grid-column-start: 10;
+    grid-column-end: 10;
+    width: 40px;
+    position: relative;
+    right: 70px;
+    background: $grey-color;
+    color: $black-color;
+    line-height: 35px;
+    vertical-align: center;
+    text-align: center;
+    border-radius: 5px;
+}
+
+.multiple-food-container {
+@include flex-helper(left, center);
+flex-wrap: wrap;
+margin: auto;
+margin-top: 2rem;
+width: $multiple-food-containerr-width;
+img {
+    display: inline-block;
+    width: 180px;
+    height: 180px;
+    border: 4px solid $white-color;
+    border-radius: 5px;
+}
+.food-image-container {
+    margin: .5rem;
+    position: relative;
+    p {
+        position: absolute;
+        font-size: 1.2rem;
+        width: 180px;
+        top: 50%;
+        opacity: 0;
+        transition-property: opacity;
+        transition-duration: .3s;
+        transition-timing-function: ease-in-out;     
+    }
+    &:hover {
+        cursor: pointer;
+        p {
+            opacity: 1;
+        }
+        &::after {
+            content: "";
+            position: absolute;
+            width: 180px;
+            height: 180px;
+            top: 0;
+            background: $black-color-with-opacity-1;
+            background: rgba(0, 0, 0, 0.5);
+        }
+    }
+}
+}
+
+.single-food-container {
+    display: none;
+
+    .single-food-image {
+        width: $single-food-image-width;
+        height: $single-food-image-height;
+        display: block;
+        margin: auto;
+        border: 4px solid $white-color;
+        border-radius: 5px;
+    }   
+
+    .food-type {
+        border: 2px dashed $orange-color;
+        border-radius: 5px;
+        width: 600px;
+        height: 7rem;
+        line-height: 7rem;
+        vertical-align: center;
+        margin: auto;
+        margin-top: 2rem;
+        margin-bottom: 2rem;
+        text-align: center; 
+    }
+
+    .food-detail {
+        text-align: center;
+        margin: auto;
+        width: 600px;
+        font-size: 1.1rem;
+        line-height: 1.7rem;
+    }
+
+    .Ingredients {
+        margin: 1.5rem  0;
+        font-size: 1.5rem;
+        text-align: center;
+    }
+}

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>memory cards</title>
+  <link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css"
+  integrity="sha256-+N4/V/SbAFiW1MPBCXnfnP9QSN3+Keu+NlB+0ev/YKQ="
+  crossorigin="anonymous"
+/>
+  <link rel="stylesheet" href="./CSS/style.css">
+</head>
+<body>
+
+
+  <div class="page-2-container">
+    <!-- // form for adding cards goes here.  -->
+    <form action="#">
+      <feildset>
+        <legend>Add New Card <button class="close-button"><i class="fas fa-times"></i></button></legend>
+
+        <label for="questions">questions</label>
+        <textarea class="question-text-area" placeholder="Enter question...">
+        </textarea>
+        <label for="answer">answer</label>
+        <textarea class="answer-text-area" placeholder="Enter answer...">
+          </textarea>
+        <button class="add-card-btn"> <i class="fas fa-plus"></i> Add task.</button>
+      </feildset>
+    </form>
+  </div>
+
+
+  <div class="page-1-container">
+    <div class="heading-container">
+      <h1 class="main-heading">Memory Cards </h1>
+      <button class="add-more-btn"><span class="plus-sign">+</span> add new cards</button>
+    </div>
+    
+    <div class="card-container">
+  
+     <!-- <div class="card-individual-container active-card">
+       <div class="card front">
+        <span class="front-flip"><i class="fas fa-sync-alt"></i>flip</span>
+        <p>testing front 1</p>
+       </div>
+       <div class="card back">
+        <span class="back-flip"><i class="fas fa-sync-alt"></i>flip</span>
+        <p>testing back</p>
+       </div>
+     </div>
+  
+     <div class="card-individual-container">
+       <div class="card front">
+        <span class="front-flip"><i class="fas fa-sync-alt"></i>flip</span>
+        <p>testing front 2</p>
+       </div>
+       <div class="card back">
+        <span class="back-flip"><i class="fas fa-sync-alt"></i>flip</span>
+        <p>testing back</p>
+       </div>
+     </div>
+  
+     <div class="card-individual-container">
+      <div class="card front">
+        <span class="front-flip"><i class="fas fa-sync-alt"></i> flip</span>
+        <p>testing front 3</p>
+      </div>
+      <div class="card back">
+        <span class="back-flip"><i class="fas fa-sync-alt"></i> flip</span>
+        <p>testing back</p>
+      </div>
+    </div> -->
+
+    </div>
+  
+    <div class="controller-container">
+      <i class="fas fa-arrow-left"></i>
+      <span class="index-card">0/</span>
+      <span class="total-indcies">0</span>
+      <i class="fas fa-arrow-right"></i>
+    </div>
+  
+  
+    <button class="clear-all-btn">
+      <i class="fas fa-trash"></i> Clear Cards
+    </button>
+  
+  </div>
+  <script src="app.js"></script>
+</body>
+</html>

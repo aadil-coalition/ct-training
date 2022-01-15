@@ -1,0 +1,117 @@
+// display image in the center done. 
+// the display heading in the center below the image. done.
+// then display paragraph about the app in the center below heading. done.
+
+// display two select element in the centerr leaving space between them. done.
+// display a button and rate below two select element. done. 
+// display same as the first select element just change the content. done.
+
+// common vaariables.
+$width: 450px; 
+$white-color: #fff;
+$black-color: #000;
+$black-color-with-opacity: rgba(0,0,0,.5);
+$off-white-color: #dedede;
+$green-color: #5fbaa7;
+$my-fonts: Arial, Helvetica, sans-serif;
+
+// globle styling
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: $my-fonts;
+}
+
+// common mixins
+@mixin flex-helper($jc, $ai) {
+    display: flex;
+    justify-content: $jc;
+    align-items: $ai;
+}
+
+// common tag styles.
+select {
+    display: inline-block;
+    position: absolute;
+    left: 0;
+    padding: .5rem .5rem;
+    background: $white-color;
+    border: 1px solid $black-color-with-opacity;
+    text-align: center;
+    font-size: 1.1rem;
+    font-weight: 400;
+}
+option {
+    background: $black-color;
+    color: $white-color;
+}
+input {
+    border: none;
+    display: inline-block;
+    font-size: 1.5rem;
+    text-align: right;
+}
+
+button {
+    background: $green-color;
+    color: $white-color;
+    padding:  .4rem .8rem;
+    border-radius: 5px;
+    &:hover {
+        cursor: pointer;
+    }
+}
+
+
+// main style starts from here.
+.display-center {
+    display: block;
+    margin: auto;
+    text-align: center;
+}
+
+.img-dimention-s {
+width: 150px;
+height: 150px;
+margin-top: 8rem;    
+}
+
+#heading {
+    color: $green-color;
+    text-transform: capitalize;
+    margin-top: 2.5rem;
+    font-size: 2rem;
+}
+
+#tag-line {
+    text-transform: capitalize;
+    margin-top: 1.9rem;
+    font-size:  1rem;
+}
+
+.data-container {
+    margin: auto;
+    margin-top: 2rem;
+    @include flex-helper(space-between, center);
+    width: $width; 
+    position: relative;
+}
+
+.middle-container {
+    @include flex-helper(space-between, center); 
+    width: $width;
+    margin: auto;
+    margin-top: 2rem;
+}
+
+.output-detail {
+    color: $green-color;
+}
+
+#output-currency-number {
+    text-align: right;
+}

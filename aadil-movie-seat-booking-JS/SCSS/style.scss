@@ -1,0 +1,141 @@
+@import url('https://fonts.googleapis.com/css?family=Lato&display=swap');
+
+
+// common variables 
+$blackis-color: #242333;
+$light-black-color: #777;
+$black-color-with-opacity: rgba(0, 0, 0, 0.1);
+$white-color: #fff;
+$white-color-with-opacity: rgba(255, 255, 255, 0.7);
+$green-color: #6feaf6;
+$grey-color: #444451;
+$my-fonts: 'Lato', sans-serif;
+$seat-container-width: 193px;
+
+// globle styling
+* {
+    box-sizing: border-box;
+    margin: 0;  
+    padding: 0;
+}
+
+// common mixins
+@mixin flex-helper($jc, $ai) {
+    display: flex;
+    justify-content: $jc;
+    align-items: $ai;
+}
+
+body {
+font-family: $my-fonts;
+background: $blackis-color;
+height: 100vh;
+@include flex-helper(center, center);
+}
+
+//common style for JS
+
+//common tags styles.
+label {
+    color: $white-color;
+    display: inline-block;
+    width: 100px;
+    margin-left: calc((100% - (100px + 150px)) / 2);
+}
+
+select {
+    width: 180px;
+    border-radius: 3px;
+    padding: .2rem .4rem;
+    color: $blackis-color;
+    &:hover {
+        cursor: pointer;
+    }
+}
+
+li {
+    list-style: none;
+}
+
+
+// main style starts from here.
+.theater-container {
+    width: 30vw;
+    height: 50vh;
+    background: $blackis-color;
+    padding-top:1rem;
+}
+
+.status-list {
+    width: 65%;
+    background: $black-color-with-opacity;
+    border-radius: 3px;
+    padding: .3rem .7rem;
+    margin: auto;
+    font-size: .9rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    color: $white-color-with-opacity;
+    text-align: center;
+}
+
+.status-list-item {
+    display: inline-block;
+    margin-right: .4rem;
+}
+.seat {
+    display: inline-block;
+    width: 15px;
+    height: 12px;
+    border-top-left-radius: 50%;
+    border-top-right-radius: 50%;
+    background: $grey-color;
+    margin-right: .2rem;
+}
+
+.screen {
+   stroke: $blackis-color;
+   stroke-width: 1px;
+   fill: $white-color;
+   display: block;
+   margin: auto;
+   margin-top: 2rem;
+   filter: drop-shadow(0px 2px 6px $white-color-with-opacity);
+}
+
+.seats-container {
+    width: $seat-container-width;
+    height: 150px;
+    margin: auto;
+    margin-top: 1.5rem;
+    background: $blackis-color;
+}
+
+// common js styles.
+.selected-seat {
+    background: $green-color;
+}
+
+.selected-seat, .not-selected-seat {
+    transition-property: transform;
+    transition-duration: .2s;
+    transition-timing-function: ease-out;
+    &:hover  {
+        cursor: pointer;
+        transform: scale(1.2);
+    }
+}
+
+.booking-massege {
+    color: $white-color;
+    text-align: center;
+    margin-top: 1.4rem;
+    .total-selected-seats, .total-selected-seats-price {
+        color: $green-color;
+    }
+}
+
+.occupied-seat {
+    background: $white-color;
+}
+

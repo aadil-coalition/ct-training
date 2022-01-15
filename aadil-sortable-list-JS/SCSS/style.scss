@@ -1,0 +1,139 @@
+// implement the heading in the center
+// implemente the instruction-text line with p in the center on the new line.
+// implement the ul 
+// style each li. 
+// implement the button to check order 
+@import url('https://fonts.googleapis.com/css?family=Lato&display=swap');
+
+// globle variable
+$white-color: #fff;
+$dark-white-color: #e3e5e4;
+$dark-white-color-1: #eaeaea;
+$black-color: #000;
+$red-color: #ff3838;
+$violate-color: #c3c7ca;
+$grey-color: #34444f;
+$green-color:#3ae374;
+$my-font: 'Lato', sans-serif;
+$rich-person-item-height: 60px;
+
+// common mixins
+@mixin flex-helper($jc, $ai) {
+display: flex;
+justify-content: $jc;
+align-items: $ai;
+}
+
+// common styling for javascript
+.green-text {
+  color: $green-color;
+}
+.red-text {
+  color: $red-color;
+}
+.normal-text {
+  color: $grey-color;
+}
+// globle styling
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: $my-font;
+}
+
+// common element's styling
+a {
+  text-decoration: none;
+  color: $black-color;
+  display: inline-block;
+}
+
+h1,h2,h3,h4 {
+  margin: auto;
+  text-align: center;
+}
+
+p { 
+  margin: auto;
+  text-align: center;
+}
+
+li {
+  list-style: none;
+}
+
+button {
+  display: inline-block;
+  border: none;
+  text-align: center;
+  padding: .4rem 1rem;
+  border-radius: 5px;
+  text-transform: capitalize;
+  background: $violate-color;
+  font-size: 1.1rem;
+  transition-property: transform;
+  transition-duration: .4s;
+  transition-timing-function: ease-in;
+  &:hover {
+    cursor: pointer;
+  }
+  &:active {
+    transform: scale(.95, .95);
+  }
+}
+
+// main style starts from here.
+.main-heading {
+  margin-top: 2rem;
+  margin-bottom: 1.5rem;
+}
+
+.instruction-text {
+  margin-bottom: 2rem;
+}
+
+.rich-people-list {
+  width: 18%;
+  border: 1px solid $dark-white-color-1;
+  margin: auto;
+  .rich-person {
+    @include flex-helper(space-between, center);
+    width: 100%;
+    height: calc(#{$rich-person-item-height} + 1px);
+    border-bottom: 1px solid  $dark-white-color;
+    color: $grey-color;
+    &:hover {
+      cursor: pointer;
+    }
+  }
+  .rich-person-name {
+    width: 60%;
+    font-size: 1.2rem;
+  }
+  .fa-grip-lines {
+    display: block;
+    margin-right: .8rem;
+    font-size: 1rem;
+  }
+  .rich-index {
+    @include flex-helper(center, center);
+    width: $rich-person-item-height; // because it suppose to be a square, so the with should be same as height.
+    height: $rich-person-item-height;
+    text-align: center;
+    font-size: 1.8rem;
+    background: $violate-color;
+    font-weight: 700;
+  }
+}
+
+
+.check-btn {
+  display: block;
+  margin: auto;
+  margin-top: 2rem;
+  color: $grey-color;
+}

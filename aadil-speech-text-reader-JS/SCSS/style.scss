@@ -1,0 +1,170 @@
+@import url('https://fonts.googleapis.com/css?family=Lato');
+
+$my-fonts: "Lato", sans-serif;
+$light-white-color: #ffefea;
+$dark-salmon-color: darksalmon;
+$white-color: #fff;
+$black-grey-color: #333;
+$light-white-border-color: #dadada;
+$black-color-with-opacity: rgba(0, 0, 0, 0.2);
+$expression-list-item-width: 320px;
+$expression-list-item-height: 220px;
+
+// common mixins
+@mixin flex-helper($jc, $ai) {
+    display: flex;
+    justify-content: $jc;
+    align-items: $ai;
+}
+
+// globle styling
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: $my-fonts;
+    background: $light-white-color;
+}
+
+// common tag styles
+h1 {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    margin-top: 2rem;
+}
+
+button {
+    padding: .5rem .4rem;
+    background: $dark-salmon-color;
+    display: block;
+    border-radius: 4px;
+    border: none;
+    margin: auto;
+    color: $white-color;
+    font-size: 1rem;
+    text-transform: capitalize;
+    margin-bottom: 1.1rem;
+
+    &:hover {
+        cursor: pointer;
+    }
+}
+
+li {
+    list-style: none;
+}
+
+img {
+    display: block;
+    width: $expression-list-item-width;
+    height: $expression-list-item-height;
+    object-fit: cover;
+    border-radius: 5px;
+}
+span {
+    display: block;
+    text-align: center;
+    text-transform: uppercase;
+    width: 100%;
+    height: 40px;
+    background: $dark-salmon-color;
+    color: $white-color;
+    font-size: 1.2rem;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    &:hover {
+        cursor: pointer;
+    }
+}
+
+// main style starts from here.
+.expression-list {
+    @include flex-helper(left, center);
+    flex-wrap: wrap;
+    width: calc(4* (#{$expression-list-item-width} + 1rem));
+    margin: auto;
+    &:hover {
+        cursor: pointer;
+    }
+    .expression-list-item {
+        width: $expression-list-item-width;
+        height: $expression-list-item-height;
+        margin-right: 1rem;
+        margin-top: 1rem;
+        position: relative;
+        .expression-list-item-text {
+            position: absolute;
+            bottom: 0;
+            line-height: 40px;
+            vertical-align: middle;
+        }
+    }
+
+    .expression-list-item:nth-child(4n) {
+        margin-right: 0;
+    }
+}
+
+.text-input-for-voice {
+    width: 70%;
+    margin: auto;
+    background: $black-grey-color;
+    border-radius: 5px;
+    color: $white-color;
+    padding: 1rem;
+    position: absolute;
+    transition-property: transform;
+    transition-duration: .7s;
+    transition-timing-function: ease-in;
+    top: 200px;
+    left: calc((100% - 70%)/2);
+    z-index: 2;
+    legend {
+        position: relative;
+        font-size: 1.2rem;
+        font-weight: bold;
+    }
+    .close-btn {
+        position: absolute;
+        right: 1rem;
+        display: inline-block;
+        width: 0px;
+    }
+
+    .text-input-btn {
+        display: block;
+        width: 100%;
+        margin: auto;
+        margin-top: 1rem;
+    }
+
+    #speak-text-area {
+        max-width: 100%;
+        min-width: 100%;
+        background: $white-color;
+        border-radius: 5px;
+        margin-top: 1rem;
+        font-size: 1rem;
+    }
+
+    #voices {
+        display:  block;
+        margin: auto;
+        color: $white-color;
+        background-color: $dark-salmon-color;
+        padding: .3rem;
+        margin-top: 1rem;
+        border: none;
+        border-radius: 5px;
+        width: 100%;
+    }
+}
+
+// common js styles
+.move-up {
+    transform: translateY(-200%);
+}

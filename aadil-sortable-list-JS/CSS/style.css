@@ -1,0 +1,97 @@
+@import url("https://fonts.googleapis.com/css?family=Lato&display=swap");
+.green-text {
+  color: #3ae374; }
+
+.red-text {
+  color: #ff3838; }
+
+.normal-text {
+  color: #34444f; }
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+body {
+  font-family: "Lato", sans-serif; }
+
+a {
+  text-decoration: none;
+  color: #000;
+  display: inline-block; }
+
+h1, h2, h3, h4 {
+  margin: auto;
+  text-align: center; }
+
+p {
+  margin: auto;
+  text-align: center; }
+
+li {
+  list-style: none; }
+
+button {
+  display: inline-block;
+  border: none;
+  text-align: center;
+  padding: .4rem 1rem;
+  border-radius: 5px;
+  text-transform: capitalize;
+  background: #c3c7ca;
+  font-size: 1.1rem;
+  transition-property: transform;
+  transition-duration: .4s;
+  transition-timing-function: ease-in; }
+  button:hover {
+    cursor: pointer; }
+  button:active {
+    transform: scale(0.95, 0.95); }
+
+.main-heading {
+  margin-top: 2rem;
+  margin-bottom: 1.5rem; }
+
+.instruction-text {
+  margin-bottom: 2rem; }
+
+.rich-people-list {
+  width: 18%;
+  border: 1px solid #eaeaea;
+  margin: auto; }
+  .rich-people-list .rich-person {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: calc(60px + 1px);
+    border-bottom: 1px solid #e3e5e4;
+    color: #34444f; }
+    .rich-people-list .rich-person:hover {
+      cursor: pointer; }
+  .rich-people-list .rich-person-name {
+    width: 60%;
+    font-size: 1.2rem; }
+  .rich-people-list .fa-grip-lines {
+    display: block;
+    margin-right: .8rem;
+    font-size: 1rem; }
+  .rich-people-list .rich-index {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 60px;
+    height: 60px;
+    text-align: center;
+    font-size: 1.8rem;
+    background: #c3c7ca;
+    font-weight: 700; }
+
+.check-btn {
+  display: block;
+  margin: auto;
+  margin-top: 2rem;
+  color: #34444f; }
+
+/*# sourceMappingURL=style.css.map */

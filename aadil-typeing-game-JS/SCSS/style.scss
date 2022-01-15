@@ -1,0 +1,182 @@
+// make top bar containing settings and make dropdown menu in the center 
+// make game container 
+ // make game over and play in the game container
+    // game over container 
+        // display time  ran out text.
+        // the final score under it.
+        // and reload button to start the game again.
+    //  game play container 
+        // game title on the top
+        // time left and score on either side
+        // game instruction 
+        // the word to be typed 
+        // finally input to take input from user    
+// make settings btn in the far left corner 
+
+// common variables.
+$my-font-family: Verdana, Geneva, Tahoma, sans-serif;
+$white-color: #fff;
+$light-blue-color: #a7c5e3;
+$dark-blue-color: #34495e;
+$dark-blue-color-1: #2c3e50;
+$black-color: #000;
+$white-color-with-opacity: rgba(255, 255, 255, .9);
+$black-color-with-opacity: rgba(0, 0, 0, 0.3);
+$form-height: 9vh;
+$game-play-container-width: 500px;
+$game-play-container-height: 250px;
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+// common mixins
+@mixin flex-helper ($jc, $ai) {
+    display: flex;
+    justify-content: $jc;
+    align-items: $ai;
+}
+
+body {
+    @include flex-helper(center, center);
+    height: 100vh;
+    font-family: $my-font-family;
+    background-color: $dark-blue-color;
+}
+
+// common js classes
+
+
+// command tag styles.
+
+button {
+    display: block;
+    text-align: center;
+    padding: .3rem 3rem;
+    margin-top: 1rem;
+    background: $white-color;
+    border: none;
+    font-size: 1rem;
+    border-radius: 5px;
+    &:hover {
+        cursor: pointer;
+        background: $white-color-with-opacity;
+    }
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 3rem;
+    font-size: 1.6rem;
+    font-weight: 700;
+}
+
+p {
+    font-weight: 900;
+    font-size: 1.2rem;
+    text-transform: capitalize;
+}
+
+
+// main style starts from here.
+.settings-form {
+    width: 100%;
+    height: $form-height;
+    position: absolute;
+    @include flex-helper(center, center);
+    top: 0;
+    background: $dark-blue-color-1;
+
+    label {
+        display: inline-block;
+        margin-right: .5rem;
+        color: $white-color;
+        font-size: 1.1rem;
+    }
+
+    select {
+        width: 200px;
+        background: $light-blue-color;
+        text-align: left;
+        padding: .4rem 0;
+        padding-left: .4rem;
+    }
+}
+
+
+.game-play-container {
+
+    width: $game-play-container-width;
+    height: $game-play-container-height;
+    box-shadow: 4px 4px 3px $black-color-with-opacity, -4px -4px  3px $black-color-with-opacity;
+    color: $white-color;
+    .game-playing {
+        display: block;
+        .game-statistics-container {
+            @include flex-helper(space-between, center);
+            width: 90%;
+            margin: auto;
+            margin-top: .9rem;
+        }
+        .game-heading {
+            width: 90%;
+            margin: auto;
+            margin-top: 1rem;
+            background: $dark-blue-color-1;
+            padding: .5rem .9rem;
+        } 
+        .game-instruction {
+            margin-top: 1.5rem;
+            margin-bottom: .5rem;
+            font-weight: lighter;
+            font-size: .8rem;
+            text-align: center;
+        } 
+    
+        #game-word {
+            margin-bottom: 0.5rem;
+            height: 30px;
+        }
+    
+        #user-word-input {
+            border: 1px solid black;
+            width: 60%;
+            padding: .6rem 1.6rem;
+            border-radius: 5px;
+            font-size: 1.1rem;
+            display: block;
+            margin: auto;
+        }
+    }
+
+    .game-over { 
+        display: none;
+        .game-over-messege {
+            text-align: center;
+            margin-top: 5rem;
+            font-size: 1.8rem;
+        }
+        .final-score {
+            margin-top: 1rem;
+            font-size: .8rem;
+            font-weight: lighter;
+            text-align: center;
+        }
+
+        .game-reload-btn {
+            margin: auto;
+            margin-top: 1rem;
+            padding: .3rem 1rem;
+        }
+    }  
+}
+
+.setting-btn {
+    position: absolute;
+    bottom: 1.5rem;
+    left: 1.5rem;
+    padding: .3rem .9rem;
+}

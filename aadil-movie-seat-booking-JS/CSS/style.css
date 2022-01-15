@@ -1,0 +1,134 @@
+@import url("https://fonts.googleapis.com/css?family=Lato&display=swap");
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Lato", sans-serif;
+  background: #242333;
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+label {
+  color: #fff;
+  display: inline-block;
+  width: 100px;
+  margin-left: calc((100% - (100px + 150px)) / 2);
+}
+
+select {
+  width: 180px;
+  border-radius: 3px;
+  padding: .2rem .4rem;
+  color: #242333;
+}
+
+select:hover {
+  cursor: pointer;
+}
+
+li {
+  list-style: none;
+}
+
+.theater-container {
+  width: 30vw;
+  height: 50vh;
+  background: #242333;
+  padding-top: 1rem;
+}
+
+.status-list {
+  width: 65%;
+  background: rgba(0, 0, 0, 0.1);
+  border-radius: 3px;
+  padding: .3rem .7rem;
+  margin: auto;
+  font-size: .9rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  color: rgba(255, 255, 255, 0.7);
+  text-align: center;
+}
+
+.status-list-item {
+  display: inline-block;
+  margin-right: .4rem;
+}
+
+.seat {
+  display: inline-block;
+  width: 15px;
+  height: 12px;
+  border-top-left-radius: 50%;
+  border-top-right-radius: 50%;
+  background: #444451;
+  margin-right: .2rem;
+}
+
+.screen {
+  stroke: #242333;
+  stroke-width: 1px;
+  fill: #fff;
+  display: block;
+  margin: auto;
+  margin-top: 2rem;
+  -webkit-filter: drop-shadow(0px 2px 6px rgba(255, 255, 255, 0.7));
+          filter: drop-shadow(0px 2px 6px rgba(255, 255, 255, 0.7));
+}
+
+.seats-container {
+  width: 193px;
+  height: 150px;
+  margin: auto;
+  margin-top: 1.5rem;
+  background: #242333;
+}
+
+.selected-seat {
+  background: #6feaf6;
+}
+
+.selected-seat, .not-selected-seat {
+  -webkit-transition-property: -webkit-transform;
+  transition-property: -webkit-transform;
+  transition-property: transform;
+  transition-property: transform, -webkit-transform;
+  -webkit-transition-duration: .2s;
+          transition-duration: .2s;
+  -webkit-transition-timing-function: ease-out;
+          transition-timing-function: ease-out;
+}
+
+.selected-seat:hover, .not-selected-seat:hover {
+  cursor: pointer;
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+}
+
+.booking-massege {
+  color: #fff;
+  text-align: center;
+  margin-top: 1.4rem;
+}
+
+.booking-massege .total-selected-seats, .booking-massege .total-selected-seats-price {
+  color: #6feaf6;
+}
+
+.occupied-seat {
+  background: #fff;
+}
+/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,157 @@
+// creaete heading 
+// create form 
+// create individual post template
+   // make index on top left corner in a circle.
+   // make post title.
+   // make post description.
+
+
+@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+
+// common variables.
+$my-font: 'Roboto', sans-serif;
+$blue-color: #296ca8;
+$light-blue-color: #4992d3;
+$black-color: #000;
+$black-color-with-opacity: rgba(0, 0, 0, 0.3);
+$white-color: #fff;
+$container-width: 55%;
+$index-dimension: 40px;
+$dot-dimantion: 10px;
+
+
+// globle style.
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: $my-font;
+    background: $blue-color;
+    color: $white-color;
+}
+
+// common mixin.
+@mixin flex-helper($jc, $ai) {
+    display: flex;
+    justify-content: $jc;
+    align-items: $ai;
+}
+
+// common animaiton
+@keyframes loader-animation {
+from {
+    transform: translateY(-10px);
+}
+to {
+    transform: translateY(0px);
+}
+}
+
+// common JS.
+// common element style.
+h1, h2 {
+    font-size: 2rem;
+    text-align: center;
+    margin: auto;
+    margin: 2rem 0;
+    color: $white-color;
+}
+
+h2 {
+    font-size: 1.5rem;
+    margin: 1rem 0;
+}
+
+
+p {
+    text-align: center;
+    font-size: 1rem;
+    color: $white-color;
+}
+
+li {
+    list-style: none;
+}
+input {
+    width: 100%;
+    background: $white-color;
+    padding: .8rem 1rem;
+    border: none;
+    border-radius: 3px;
+    font-size: 1rem;
+    &:active {
+        border-color: $blue-color;
+    }
+}
+
+// main style starts from here
+
+.container {
+    width: $container-width;
+    margin: auto;
+}
+
+
+
+.post-list {
+    margin-top: 1.8rem;
+
+}
+.post-list-item {
+    width: 100%;
+    background: $light-blue-color;
+    margin: 2rem 0rem;
+    border-radius: 5px;
+    box-shadow: 7px 7px 3px $black-color-with-opacity, -7px -7px 3px $black-color-with-opacity;
+    position: relative;
+    padding: 1rem 1.2rem;
+    h2,p {
+        text-align: left;
+        width: 100%;
+        margin-top: .8rem;
+        margin-bottom: .3rem;
+    }
+
+    p {
+        margin: .7rem 0rem;
+    }
+
+    .post-list-index {
+        background: $white-color;
+        color: $black-color;
+        display: inline-block;
+        line-height: $index-dimension;
+        height: $index-dimension;
+        width: $index-dimension;
+        text-align: center;
+        vertical-align: middle;
+        border-radius: 50%;
+        position: absolute;
+        left: calc(-1 * #{$index-dimension}/2);
+        top: calc(-1 * #{$index-dimension}/2);
+    }
+}
+
+.loader {
+@include flex-helper(space-evenly, center);
+width: 100px;
+margin: auto;
+height: 30px;
+visibility: hidden;
+.loader-dot {
+width: $dot-dimantion;
+height: $dot-dimantion;
+border-radius: 50%;
+background: $white-color;
+animation: loader-animation .5s ease-in-out infinite;
+
+&:nth-child(2) {
+    animation-delay: .1s;
+}
+&:nth-child(3) {
+    animation-delay: .2s;
+}
+}
+}
+

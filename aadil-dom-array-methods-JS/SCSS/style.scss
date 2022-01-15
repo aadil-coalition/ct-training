@@ -1,0 +1,113 @@
+// make dom heading. done.
+// on the left-side make buttons done.
+// then make a verticle line done.
+// then make a person table  done.
+    // in that table make two columm one for person and the other for the wealth done.
+    // in the last table row make total amount row and make it hidden done.
+
+// common variables.
+$my-font-family: Arial, Helvetica, sans-serif;
+$white-color: #fff;
+$off-white-color: #f4f4f4;
+$black-color: #333;
+$black-color-with-opacity: rgba(0, 0, 0, 0.12);
+$btn-width: 210px;
+$person-data-list-width: 450px;
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: $my-font-family;
+    background-color: $off-white-color;
+}
+
+// common mixins
+@mixin flex-helper ($jc, $ai) {
+    display: flex;
+    justify-content: $jc;
+    align-items: $ai;
+}
+
+// command tag styles.
+button {
+    display: block;
+    text-align: center;
+    padding: .5rem 0;
+    margin-top: 1rem;
+    border: 1px solid black;
+    border-radius: 5px;
+    font-size: 1rem;
+    background: $white-color;
+    width: $btn-width;
+    &:hover {
+        cursor: pointer;
+    }
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 3rem;
+    font-size: 2rem;
+    font-weight: 700;
+    margin-top: 2rem;
+}
+
+li {
+    list-style: none;
+}
+// main style starts from here.
+.application-cotainer {
+    @include flex-helper(center, top);
+}
+
+.person-data-container {
+    margin-top: 1rem;
+    margin-left: 2rem;
+    border-left: 1px solid black;
+    .person-data-list {
+        width: $person-data-list-width;
+    }
+
+    .person-data-list-item {
+        @include flex-helper(space-between, center);
+        padding: .3rem;
+        margin-left: 1rem;
+        strong, span {
+            font-size:1.2rem;
+            font-weight: bold;
+        }
+
+        span {
+            font-weight: normal;
+        }
+
+        &:nth-child(2) {
+            padding-top: 1rem;
+        }
+    }
+
+    .person-data-list-item-heading {
+        @include flex-helper(space-between, center);
+        margin-left: 1rem;
+        border-bottom: 1px solid black;
+        padding-bottom: .7rem;
+        span, strong {
+            font-weight: normal;
+            font-size: 1.5rem;
+        }
+    }
+
+    .white-background {
+        background: $white-color;
+        border-bottom: 1px solid black;
+        margin-top: 1rem;
+        strong {
+            font-weight: lighter;
+        }
+    }
+}
+

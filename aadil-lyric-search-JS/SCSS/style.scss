@@ -1,0 +1,231 @@
+// get the asessts.
+// make header and add background picture.
+// make search bar right in the middle
+// make the container to contain all the lyrics. and all the songs of  
+    /// a typed artist in the search bar.
+
+    // bonus make a back button. It should appear when some one clicks the 
+    // display lyrics button and when the back button is clicked display the 
+    // original list of songs.
+
+
+    //  'https://images.unsplash.com/photo-1510915361894-db8b60106cb1?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80'
+
+
+// globle variable
+$white-color: #fff;
+$violet-color: #e056fd;
+$dark-violet-color: #8d56fd;
+$my-font: Arial, Helvetica, sans-serif;
+$black-color: #000;
+$search-input-width: 60%;
+$search-container-height: 45vh;
+
+
+// common mixins
+@mixin flex-helper($jc, $ai) {
+display: flex;
+justify-content: $jc;
+align-items: $ai;
+}
+
+
+// globle styling
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: $my-font;
+}
+
+// common element's styling
+a {
+  text-decoration: none;
+  color: $black-color;
+  display: inline-block;
+}
+
+h1,h2,h3,h4 {
+  margin: auto;
+  text-align: center;
+}
+
+li {
+  list-style: none;
+}
+
+input {
+  display: inline-block;
+  border: none;
+  text-align: center;
+  padding: .8rem 1.4rem;
+  border-radius: 5px;
+  &:focus {
+    outline: none;
+  }
+}
+
+button {
+  display: inline-block;
+  border: none;
+  text-align: center;
+  padding: .4rem .8rem;
+  border-radius: 12px;
+  text-transform: capitalize;
+  background: $dark-violet-color;
+  color: $white-color;
+  transition-property: transform;
+  transition-duration: .4s;
+  transition-timing-function: ease-in;
+  &:hover {
+    cursor: pointer;
+    transform: scale(.95, .95);
+  }
+}
+
+// main style starts from here.
+.search-container{
+  height: $search-container-height;
+  width: 100%;
+  background: url('https://images.unsplash.com/photo-1510915361894-db8b60106cb1?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80');
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  @include flex-helper(center, center);
+  position: relative;
+  &::after {
+    content: '';
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top:0;
+    left:0;
+    background: $black-color;
+    opacity: .5;
+  }
+}
+
+form {
+  display: block;
+  width: 60%;
+  z-index: 1;
+  legend {
+    text-align: center;
+    margin-bottom: 2rem;
+    font-size: 2rem;
+    font-weight: 700;
+    color: $white-color;
+  }
+  feildset {
+    display: block;
+    text-align: center;
+    position: relative;
+  }
+  input[type="submit"] {
+    background: $violet-color;
+    color: $white-color;
+    border-radius: 30px;
+    position: absolute;
+    right: calc((100% - #{$search-input-width})/2);
+    font-size: 1.1rem;
+    height: 45px;
+    padding-left:2rem;
+    padding-right: 2rem;
+    margin-top: 2.5px;
+    text-transform: capitalize;
+    margin-right: 2.5px;
+    transition-property: trasform;
+    transition-timing-function: ease-in;
+    &:hover {
+      cursor: pointer;
+    }
+    &:active {
+      transform: scale(.95,.95);
+    }
+  }
+  .search-input-box {
+    text-align:left;
+    font-size: 1rem;
+    width: $search-input-width;
+    height: 50px;
+    display: inline-block;
+    margin: auto;
+    border-radius: 30px; 
+  }
+}
+
+.songs-list-container {
+  @include flex-helper(center, center);
+  position: relative;
+
+  .loader {
+    position: absolute;
+    margin: auto;
+    width: 20%;
+    top: 20%;
+    display:none;
+    // border: 1px solid black;
+  }
+  .lyrics-container {
+    display: none;
+    width: 100%;
+    height: 80vh;
+    position: absolute;
+    top: 0; 
+    left: 0;
+  }
+  .individual-lyrics {
+    text-align: left;
+    margin: auto;
+    width: 50%;
+  }
+  .lyrics-title {
+    text-align: left;
+    width: 50%;
+    font-weight: 200;
+    margin-bottom: 2rem;
+    margin-top: 2rem;
+  }
+  .lyrics-back {
+    margin-top: 2rem;
+    margin-left: 50%;
+    padding: .8rem 1.5rem;
+  }
+}
+
+.search-results-notice {
+  font-weight: 200;
+  font-size: 1.1rem;
+  text-transform: capitalize;
+  margin-top: 2rem;
+}
+
+.song-list {
+  margin-top: 2rem;
+  text-align: center;
+  width: 40%;
+  background: $white-color;
+
+  .song-list-item {
+    @include flex-helper(space-between, center);
+    width: 100%;
+    padding: .4rem;
+  }
+
+  .artist-name {
+    font-weight: 600;
+    text-transform: capitalize;
+  }
+
+  .song-name {
+    font-weight: normal;
+  }
+}
+
+
+
+
+

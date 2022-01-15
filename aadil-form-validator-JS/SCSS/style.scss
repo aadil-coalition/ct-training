@@ -1,0 +1,94 @@
+
+// common variables
+$off-white-color: #f9fafb;
+$white-color: #fff;
+$green-color: #2ecc71;
+$red-color: #e74c3c;
+$off-white-color-1: #f0f0f0;
+$dark-grey-color: #777;;
+$blue-color: #3498db;
+$form-width: 400px;
+$my-fonts: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+
+// globle styling
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body {
+    background: $off-white-color;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-family: $my-fonts;
+}
+
+// common js styling
+.error:focus {
+    border-color: $red-color;
+}
+.success:focus {
+    border-color: $green-color;
+}
+// common tag style for html
+input {
+    display: block;
+    width: 80%;
+    margin: auto;
+    color: $dark-grey-color;
+    margin-bottom: 1.5rem;
+    padding: .4rem;
+    font-size: 1.2rem;
+    border-radius: 3px;
+    border: 1px solid $dark-grey-color;
+    &:focus {       
+        outline: none;
+        border-color: $dark-grey-color;
+    }
+}
+label {
+    display: block;
+    margin: auto;
+    margin-bottom: .6rem;
+    font-size: 1.2rem;
+    width: 80%;
+    margin-bottom: .4rem;
+}
+button {
+    display: block;
+    width: 80%;
+    font-size: 1.2rem;
+    background: $blue-color;
+    padding: .8rem .3rem;
+    color: $white-color;
+    border-radius: 5px;
+    text-align: center;
+    margin-top: 2rem;
+    margin: auto;
+    &:hover {
+        cursor: pointer;
+    }
+}
+
+form {
+    width: $form-width;
+    padding: 1rem 1.5rem;
+    background: $white-color;
+    box-shadow: 0 0 10px rgba(0,0,0,.2);
+    padding: 2rem 0rem;
+    legend {
+        text-align: center;
+        margin-bottom: 1.5rem;
+        font-size: 1.5rem;
+    }
+}
+span {
+    display: block;
+    margin: auto;
+    font-size: 1.2rem;
+    color: $red-color;
+    width: 80%;
+    margin-top: -1rem;
+}

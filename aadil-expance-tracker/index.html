@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expense Tracker</title>
+    <link rel="stylesheet" href="CSS/style.css">
+</head>
+<body>
+    
+    <div class="expance-tracker-container">
+        <h1 class="app-heading">Expense Tracker</h1>
+
+        <p class="balance-text">Your Balance 
+            <span class="balance-total-text">$0</span>
+        </p>
+
+        <div class="income-expance-container">
+            <p class="income"><span class="income-expance-heading">Income</span>$0</p>
+            <span class="verticle-line"></span>
+            <p class="expance"><span class="income-expance-heading">Expense</span>$0</p>
+        </div>
+
+        <p class="history">history</p>
+        <!-- this is horizontal line. -->
+        <span class="hr-line"></span>
+
+        <!-- this is the list for transection history -->
+        <ul class="history-list">
+            <!-- <li class="history-list-item">
+                <span class="history-list-time-icon">X</span>
+                <span class="history-list-discription">dummy history</span> 
+                <span class="history-list-amount"><span>-23</span> <span class="history-list-transection-color green-background"></span></span>
+            </li> -->
+            <!-- <li class="history-list-item">
+                <span class="history-list-discription">dummy history</span> 
+                <span class="history-list-amount"> <span>-23</span>  <span class="history-list-transection-color green-background"></span></span>
+            </li>
+            <li class="history-list-item">
+                <span class="history-list-discription">dummy history</span> 
+                <span class="history-list-amount"><span>-23</span> <span class="history-list-transection-color green-background"></span></span>
+            </li> -->
+        </ul>
+
+        <p class="new-transection">Add new transaction</p>
+        <!-- this is horizontal line. -->
+        <span class="hr-line"></span>
+
+        <form action="#" class="transection-add-form">
+            <label for="expance-dispcreption">Text</label>
+            <input type="text" name="expance-dispcreption" placeholder="Enter text...">
+            <label for="expance-amount">Amount
+                (negative - expense, positive - income)
+            </label>
+            <input type="number" name="expance-amount" placeholder="Enter amount...">
+
+            <button class="transection-add-form-btn">
+                add transection
+            </button>
+        </form>
+    </div>
+    
+    <script src="app.js"></script>
+</body>
+</html>

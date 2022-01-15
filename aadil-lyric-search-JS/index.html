@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>lyrics search engine</title>
+  <link rel="stylesheet" href="CSS/style.css">
+</head>
+<body>
+  
+<div class="search-container">
+  <form action="#">
+    <feildset>
+      <legend class="form-title">LyricsSearch</legend>
+      <input type="text" placeholder="Enter artist or song name..." class="search-input-box" />
+      <label for="search-text" name="search-bar"  class="search-label"></label>  
+      <input type="submit" value="search">
+    </feildset>
+  </form>
+</div>
+
+<h2 class="search-results-notice">results will be displayed here.</h2>
+
+<div class="songs-list-container">
+  <img src="./img/spinner.gif" class="loader" alt="loader image">
+  <ul class="song-list">
+    <!-- <li class="song-list-item">
+    <span class="artist-name">frank sinatra - 
+      <span class="song-name">my way</span>
+    </span>  
+      
+     <button class="get-lyrics-button">get lyrics</button>
+    </li>
+    <li class="song-list-item">
+      <span class="artist-name">frank sinatra - 
+        <span class="song-name">my way</span>
+      </span>       
+      <button class="get-lyrics-button">get lyrics</button>
+    </li>
+    <li class="song-list-item">
+      <span class="artist-name">frank sinatra - 
+        <span class="song-name">my way</span>
+      </span>       
+      <button class="get-lyrics-button">get lyrics</button>
+    </li>
+    <li class="song-list-item">
+      <span class="artist-name">frank sinatra - 
+        <span class="song-name">my way</span>
+      </span>       
+      <button class="get-lyrics-button">get lyrics</button>
+    </li>
+    <li class="song-list-item">
+      <span class="artist-name">frank sinatra - 
+        <span class="song-name">my way</span>
+      </span>      
+    <button class="get-lyrics-button">get lyrics</button>
+    </li> -->
+  </ul>
+  <div class="lyrics-container">
+    <!-- lyrics will be displayed here. -->
+  </div>
+</div>
+
+  <script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,276 @@
+// fetching fonts from google.
+@import url('https://fonts.googleapis.com/css?family=Lato&display=swap');
+
+
+// common variables
+$violate-color: #30336b;
+$kind-of-pink-color: #be2edd;
+$white-color: #fff;
+$grey-color-with-opacity: rgba(200, 200, 200, 0.1);
+$black-color-with-opacity: rgba(0, 0, 0, 0.6);
+$my-fonts: 'Lato', sans-serif;
+
+
+// globle style
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+body {
+    font-family: $my-fonts;
+}
+// common js class
+.slide {
+    transform: translateX(0);
+}
+.slide-back {
+    transform: translateX(-35vw);
+}
+
+// common html tag style 
+a {
+    text-decoration: none;
+    color: $white-color;
+    display: inline-block;
+
+    &:hover {
+        border-bottom: none;
+        color: $white-color;
+    }
+}
+
+img {
+    display: block;
+}
+
+button {
+    border-radius: 5px;
+    background: $kind-of-pink-color;
+    padding: .6rem 0;
+    text-transform: capitalize;
+    display: block;
+    color: $white-color;
+    border: none;
+    font-size: 1.3rem;
+    width: 120px;
+    margin: auto;
+    margin-top: 2rem;
+    &:hover {
+        cursor: pointer;
+    }
+}
+
+h1 {
+    text-align: center;
+    margin: auto;
+    margin-bottom: 1.2rem;
+    font-size: 3rem;
+}
+
+h2 {
+    margin-bottom: 1rem;
+}
+
+// main style starts from here.
+.slider-menu {
+    width: 15vw;
+    border-right: 2px solid $grey-color-with-opacity;
+    height: 100vh;
+    position: absolute;
+    background: $violate-color;
+    z-index: 1;
+    transform: translateX(-35vw);
+    transition-property: transform;
+    transition-duration: .5s;
+    transition-timing-function: ease-in-out;
+}
+
+.user-profile-image {
+    height: 80px;
+    width: 80px;
+    margin: auto;
+    margin-top: 2rem;
+    margin-bottom: 1.5rem;
+    border-radius: 50%;
+}
+
+.nvaigation-list-item {
+    list-style: none;
+}
+
+.landing-page-container {
+    border: 1px solid black;
+    width: 100vw;
+}
+.landing-page-heading-container {
+    background: $violate-color;
+    color: $white-color;
+    padding: 2rem;
+    position: relative;
+    .hamburger {
+        width: 50px;
+        height: 50px;
+        background: $black-color-with-opacity;
+        position: absolute;
+        top: 1rem;
+        right: 2rem;
+        padding-top: calc((50px - (15px + 1rem))/2);
+        padding-left: .3rem;
+        padding-right: .3rem;
+        &:hover {
+            cursor: pointer;
+        }
+
+        span {
+            display: block;
+            margin: auto;
+            background: $white-color;
+            height: 5px;
+            width: 90%;
+            border-radius: 2px;
+            margin-bottom: .5rem;
+        }
+    }
+
+}
+
+.nvaigation-list-item {
+    text-align: left;
+    padding-left: .8rem;
+    padding-top: 1.3rem;
+    padding-bottom: 1.1rem;
+    font-size: 1.2rem;
+    border-bottom: 2px solid $grey-color-with-opacity;
+    text-transform: capitalize;
+    font-weight: lighter;
+    &:first-child {
+        border-top: 2px solid $grey-color-with-opacity;
+    }
+}
+
+.tagline {
+    font-size: 1.3rem;
+    text-align: center;
+}
+
+
+.landing-page-main-content {
+    width: 50%;
+    margin: auto;
+    padding-top: 2rem;
+
+    p {
+        margin-bottom: 1rem;
+    }
+}
+
+.benifit-list {
+    margin-bottom: 1rem;
+    margin-left: 2rem;
+}
+
+// form style.
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+// common js styling
+
+// common tag style for html
+
+
+
+form {
+$off-white-color: #f9fafb;
+$white-color: #fff;
+$green-color: #2ecc71;
+$red-color: #e74c3c;
+$off-white-color-1: #f0f0f0;
+$dark-grey-color: #777;;
+$blue-color: #3498db;
+$form-width: 400px;
+$my-fonts: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+
+.error:focus {
+    border-color: $red-color;
+}
+.success:focus {
+    border-color: $green-color;
+}
+
+position: absolute;
+top: 10%;
+left: 35%;
+transition-property: visibility, opacity;
+// visibility: hidden;
+// opacity: 1;
+transition-duration: .5s;
+transition-timing-function: ease-in-out;
+width: $form-width;
+background: $white-color;
+box-shadow: 0 0 10px rgba(0,0,0,.2);
+border-radius: 5px;
+border: 1px solid $black-color-with-opacity;
+padding-bottom: 1rem;
+    legend {
+        text-align: left;
+        margin-bottom: 1.5rem;
+        font-size: 1.5rem;
+        background: $violate-color;
+        color: $white-color;
+        width: 100%;
+        padding: .9rem .5rem;
+        display: flex; 
+        justify-content: space-between;
+    }
+    span {
+        display: block;
+        margin-left: .9rem;
+        font-size: 1.2rem;
+        color: $red-color;
+        width: 90%;
+        margin-top: -1rem;
+    }
+    button {
+        width: 20%;
+        font-size: 1rem;
+        background: $kind-of-pink-color;
+        padding: .4rem .3rem;
+        color: $white-color;
+        margin: 0;
+        margin-left: .9rem;
+    }
+    input {
+        display: block;
+        width: 90%;
+        color: $dark-grey-color;
+        margin-bottom: 1.5rem;
+        padding: .4rem;
+        font-size: 1.2rem;
+        border-radius: 3px;
+        border: 1px solid $dark-grey-color;
+        margin-left: .9rem;
+
+        &:focus {
+            outline: none;
+            border-color: $dark-grey-color;
+        }
+    }
+    label {
+        display: block;
+        margin-bottom: .6rem;
+        font-size: 1.2rem;
+        width: 90%;
+        margin-bottom: .4rem;
+        margin-left: .9rem;
+    }
+    .fa-times:hover {
+        cursor: pointer;
+    }
+}
+

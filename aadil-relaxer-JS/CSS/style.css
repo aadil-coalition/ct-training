@@ -1,0 +1,84 @@
+@keyframes revolve {
+  from {
+    transform: rotate(0deg); }
+  to {
+    transform: rotate(360deg); } }
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+body {
+  font-family: "Montserrat", sans-serif;
+  background: url(../img/bg.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  color: #fff; }
+
+h1 {
+  margin: auto;
+  text-align: center;
+  margin-bottom: 2rem;
+  padding: 2rem;
+  text-transform: capitalize;
+  font-weight: 300;
+  letter-spacing: .05rem;
+  font-size: 2rem; }
+
+p {
+  font-size: 1.2rem;
+  text-transform: capitalize;
+  text-align: center;
+  margin: auto;
+  z-index: 1; }
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 81vh;
+  position: relative; }
+
+.circle {
+  width: 200px;
+  height: 200px;
+  margin: auto;
+  border-radius: 50%;
+  position: relative;
+  transition-property: transform;
+  transition-duration: 2s;
+  transition-timing-function: ease-in-out;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: conic-gradient(#2a5b52 0deg, #2a5b52 140deg, #fff 140deg, #fff 220deg, #224941 220deg, #224941 360deg); }
+  .circle::after {
+    content: '';
+    position: absolute;
+    border-radius: 50%;
+    width: 90%;
+    height: 90%;
+    background: #010f1c; }
+
+.smaller-circle-contaier {
+  position: absolute;
+  width: 20px;
+  height: 70%;
+  z-index: 5;
+  bottom: 50%;
+  transform-origin: bottom center;
+  animation-name: revolve;
+  animation-iteration-count: infinite;
+  animation-duration: 5s;
+  animation-timing-function: ease-in-out; }
+  .smaller-circle-contaier .smaller-circle {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    position: absolute;
+    top: 0;
+    background: #fff;
+    z-index: 5; }
+
+/*# sourceMappingURL=style.css.map */

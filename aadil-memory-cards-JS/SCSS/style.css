@@ -1,0 +1,310 @@
+@import url("https://fonts.googleapis.com/css?family=Lato:300,500,700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  font-family: "Lato", sans-serif;
+  overflow-x: hidden;
+}
+
+h1, h2, h3 {
+  margin: auto;
+  text-align: center;
+  font-size: 2rem;
+}
+
+p {
+  margin: auto;
+  text-align: center;
+  font-size: 1.1rem;
+}
+
+button {
+  border: none;
+  border-radius: 5px;
+  text-align: center;
+  padding: .6rem 1.2rem;
+  display: inline-block;
+}
+
+button:hover {
+  cursor: pointer;
+}
+
+.display-card {
+  z-index: 2;
+}
+
+.hide-card {
+  z-index: -1;
+}
+
+.front-flipping-1 {
+  -webkit-transform: rotateX(-180deg);
+          transform: rotateX(-180deg);
+  z-index: -1;
+}
+
+.back-flipping-1 {
+  -webkit-transform: rotateX(0deg);
+          transform: rotateX(0deg);
+  z-index: 10;
+}
+
+.front-flipping-2 {
+  -webkit-transform: rotateX(0deg);
+          transform: rotateX(0deg);
+  z-index: 1;
+}
+
+.back-flipping-2 {
+  -webkit-transform: rotateX(180deg);
+          transform: rotateX(180deg);
+  z-index: -1;
+}
+
+.heading-container {
+  width: 30%;
+  margin: auto;
+  margin-top: 10%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.heading-container .main-heading {
+  margin: 0;
+  display: inline-block;
+}
+
+.heading-container .add-more-btn {
+  margin-left: 1rem;
+  font-size: .8rem;
+  font-weight: 400;
+  padding: 0rem .6rem;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  border: 1px solid #000;
+  border-radius: 3px;
+  text-transform: capitalize;
+  background-color: #fff;
+}
+
+.heading-container .plus-sign {
+  font-weight: 900;
+  font-size: 1rem;
+}
+
+.card-container {
+  width: 400px;
+  height: 250px;
+  margin: auto;
+  margin-top: 2rem;
+  position: relative;
+}
+
+.card-container .card-individual-container {
+  width: 400px;
+  height: 250px;
+  position: absolute;
+  -webkit-box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.3), -1px -1px 10px rgba(0, 0, 0, 0.3);
+          box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.3), -1px -1px 10px rgba(0, 0, 0, 0.3);
+  display: none;
+}
+
+.card-container .card {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.card-container .card span {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  color: rgba(0, 0, 0, 0.3);
+  font-size: 1.1rem;
+}
+
+.card-container .card span:hover {
+  cursor: pointer;
+}
+
+.card-container .card p {
+  font-size: 1.4rem;
+}
+
+.card-container .back {
+  width: 400px;
+  height: 250px;
+  background: #f0f0f0;
+  -webkit-transform: rotateX(180deg);
+          transform: rotateX(180deg);
+  -webkit-transition-property: -webkit-transform;
+  transition-property: -webkit-transform;
+  transition-property: transform;
+  transition-property: transform, -webkit-transform;
+  -webkit-transition-duration: .5s;
+          transition-duration: .5s;
+  -webkit-transition-timing-function: ease-in;
+          transition-timing-function: ease-in;
+}
+
+.card-container .front {
+  width: 400px;
+  height: 250px;
+  -webkit-transform: rotateX(0deg);
+          transform: rotateX(0deg);
+  -webkit-transition-property: -webkit-transform;
+  transition-property: -webkit-transform;
+  transition-property: transform;
+  transition-property: transform, -webkit-transform;
+  -webkit-transition-duration: .5s;
+          transition-duration: .5s;
+  -webkit-transition-timing-function: ease-in;
+          transition-timing-function: ease-in;
+  background: #f0f0f0;
+}
+
+.card-container .active-card {
+  display: block;
+}
+
+.controller-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-top: 2rem;
+}
+
+.controller-container .fa-arrow-left, .controller-container .fa-arrow-right {
+  display: inline-block;
+  margin: 0rem 2rem;
+}
+
+.controller-container .fa-arrow-left:hover, .controller-container .fa-arrow-right:hover {
+  cursor: pointer;
+}
+
+.clear-all-btn {
+  position: absolute;
+  bottom: 30px;
+  left: 30px;
+  border: 1px solid rgba(0, 0, 0, 0.3);
+  background: #fff;
+  border-radius: 3px;
+  font-size: .9rem;
+  font-weight: 500;
+}
+
+.page-2-container {
+  background: #f0f0f0;
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  display: none;
+}
+
+.page-2-container form {
+  margin-top: 25vh;
+  width: 100%;
+}
+
+.page-2-container legend {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 3rem;
+}
+
+.page-2-container textarea {
+  display: block;
+  width: 30%;
+  margin: auto;
+  margin-bottom: 2rem;
+  min-height: 80px;
+}
+
+.page-2-container textarea::-webkit-input-placeholder {
+  display: inline-block;
+  font-size: 1rem;
+}
+
+.page-2-container textarea:-ms-input-placeholder {
+  display: inline-block;
+  font-size: 1rem;
+}
+
+.page-2-container textarea::-ms-input-placeholder {
+  display: inline-block;
+  font-size: 1rem;
+}
+
+.page-2-container textarea::placeholder {
+  display: inline-block;
+  font-size: 1rem;
+}
+
+.page-2-container label {
+  display: block;
+  width: 30%;
+  margin: auto;
+  text-transform: capitalize;
+  margin-bottom: .5rem;
+  font-size: 1rem;
+}
+
+.page-2-container button {
+  display: block;
+  margin: auto;
+  margin-top: 1rem;
+  background: #fff;
+  border: 1px solid rgba(0, 0, 0, 0.3);
+  font-size: 1rem;
+  border-radius: 3px;
+}
+
+.page-2-container button.close-button {
+  display: inline-block;
+  border: none;
+  padding: 0;
+  bottom: 25%;
+  position: relative;
+  bottom: .4rem;
+  font-size: .8rem;
+  left: 1rem;
+}
+
+.page-2-container i {
+  font-size: 1rem;
+}
+
+.page-2-container i.fa-plus {
+  display: inline-block;
+  margin-right: .2rem;
+}
+/*# sourceMappingURL=style.css.map */

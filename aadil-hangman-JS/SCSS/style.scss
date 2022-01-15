@@ -1,0 +1,163 @@
+
+
+
+
+
+
+
+// common variables.
+$my-font: Arial, Helvetica, sans-serif;
+$grey-blue-color: #34495e;
+$grey-blue-color-1: #2980b9;
+$sky-blue-color: #2980b9;
+$black-color: #000;
+$black-color-with-opacity: rgba(0, 0, 0, 0.3);
+$white-color: #fff;
+$try-again-width: 350px;
+$try-again-height: 170px;
+
+
+
+// globle style.
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: $my-font;
+    background: $grey-blue-color;
+    color: $white-color;
+}
+
+// common mixin.
+@mixin flex-helper($jc, $ai) {
+    display: flex;
+    justify-content: $jc;
+    align-items: $ai;
+}
+
+
+// common JS.
+// common element style.
+h1 {
+    font-size: 2rem;
+    text-align: center;
+    margin: 1rem 0;
+}
+
+p {
+    text-align: center;
+    font-size: 1rem;
+}
+button {
+    padding: .8rem 1rem;
+    background: $white-color;
+    border-radius: 3px;
+    border: none;
+    color: $sky-blue-color;
+
+    &:hover {
+        cursor: pointer;
+    }
+}
+
+// main style starts here.
+.container {
+    margin: auto;
+    margin-top: 4rem;
+    // border: 1px solid black;
+    @include flex-helper(space-between, center);
+    width: 45vh;
+    height: 50vh;
+    position: relative;
+}
+
+.hangman {
+    stroke: $white-color;
+    fill: $white-color;
+    stroke-width: 5px;
+    stroke-linecap: round;
+
+    .hangman-hollow-shape {
+        fill: none;
+        stroke-width: 4px;
+    }
+}
+
+.hangman-limb {
+    visibility: hidden;
+}
+
+.word {
+    @include flex-helper(center, center);
+    margin-top: 2rem;
+}
+.under_line {
+    height: 3px;
+    background: $sky-blue-color;
+    width: 20px;
+    margin-top: 10px;
+}
+.letter {
+    font-size: 1.5rem;
+    display: inline-block;
+    margin: 0 5px;
+    text-align: center;
+
+    span {
+       visibility: hidden;
+    }
+}
+
+.wrong-letters-container {
+    text-transform: capitalize;
+    position: absolute;
+    top: 3.3rem;
+    right: 0;
+    visibility: hidden;
+}
+.wrong-letters {
+    text-transform: lowercase;
+    font-size: 1.4rem;
+    display: block;
+    text-align: right;
+}
+
+.try-again {
+    padding: 2rem 0;
+    background:$sky-blue-color;
+    position: fixed;
+    top: 40%;
+    left: 40%;
+    width: $try-again-width;
+    height: $try-again-height;
+    border-radius: 3px;
+    visibility: hidden;
+    p {
+        font-size: 1.5rem;
+        font-weight: bold;
+    }
+    button {
+        display: block;
+        margin: auto;
+        margin-top: 2.7rem;
+        width: 30%;
+        font-size: 1rem;
+    }
+}
+
+.already-typed {
+    position: absolute;
+    width: 300px;
+    left: calc(60% - 300px) ;
+    font-size: 1.2rem;
+    align-content: center;
+    border-radius: 8px;
+    transform: translateY(170px);
+    padding: .8rem 1rem;
+    margin: auto;
+    background: $grey-blue-color-1;
+    transition-property: transform;
+    transition-duration: .3s;
+    transition-timing-function: ease-in-out;
+}

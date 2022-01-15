@@ -1,0 +1,141 @@
+// get the asessts. (done.)
+// make background (done.)
+// add relaxer heading on top (done.)
+// make circle in the middle of the page (done.) 
+  // a. fill it with appropriate text. (done.)
+  // b. make it border tri-colored  (done.)
+  // c. make an infinit ball that revolve around it. (done.)
+
+    // #55b7a4 0%,
+    // #4ca493 40%,
+    // #fff 40%,
+    // #fff 60%,
+    // #336d62 60%,
+    // #2a5b52
+
+// common variables.
+$my-font-family: 'Montserrat', sans-serif;
+$light-blue-color: #2a5b52;
+$white-color: #fff;
+$teal-color: #224941;
+$dark-background: #010f1c;
+
+
+// common mixins.
+@mixin flex-helper($js, $ai) {
+  display: flex;
+  justify-content: $js;
+  align-items: $ai;
+}
+
+
+// common animations.
+
+@keyframes revolve {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+// globle style
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: $my-font-family;
+  background: url(../img/bg.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  color: $white-color;
+}
+
+h1 {
+  margin: auto;
+  text-align: center;
+  margin-bottom: 2rem;
+  padding: 2rem;
+  text-transform: capitalize;
+  font-weight: 300;
+  letter-spacing: .05rem;
+  font-size: 2rem;
+}
+
+p { 
+  font-size: 1.2rem;
+  text-transform: capitalize;
+  text-align: center;
+  margin: auto;
+  z-index: 1;
+}
+
+// main styling starts from here.
+.container {
+@include flex-helper(center, center);
+height: 81vh;
+position: relative;
+}
+
+
+.circle {
+width: 200px;
+height: 200px;
+margin: auto;
+border-radius: 50%;
+position: relative;
+transition-property: transform;
+transition-duration: 2s;
+transition-timing-function: ease-in-out;
+
+@include flex-helper(center, center);
+
+background: conic-gradient(
+  $light-blue-color 0deg, 
+  $light-blue-color 140deg,
+  $white-color 140deg,
+  $white-color 220deg,
+  $teal-color 220deg,
+  $teal-color 360deg
+);
+&::after {
+  content: '';
+  position: absolute;
+  border-radius: 50%;
+  width: 90%;
+  height: 90%;
+  background: $dark-background;
+}
+}
+
+.smaller-circle-contaier {
+  position: absolute;
+  width: 20px;
+  height: 70%;
+  z-index: 5;
+  bottom: 50%;
+  transform-origin: bottom center;
+  animation-name: revolve;
+  animation-iteration-count: infinite;
+  animation-duration: 5s;
+  animation-timing-function: ease-in-out;
+  .smaller-circle{
+    width: 20px; 
+    height: 20px;
+    border-radius: 50%;
+    position: absolute; 
+    top: 0;
+    background: $white-color;
+    z-index: 5;
+  }
+}
+
+
+
+
+
+
