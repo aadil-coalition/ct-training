@@ -1,0 +1,192 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto:300");
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 2fr 3fr;
+      grid-template-columns: 2fr 3fr;
+}
+
+h1, h2, h3, h4 {
+  color: #fff;
+}
+
+a {
+  text-decoration: none;
+  color: #fff;
+}
+
+form > * {
+  margin: auto;
+  display: block;
+  text-align: center;
+}
+
+input {
+  display: block;
+  width: 65%;
+  margin-bottom: 1.5rem;
+  height: 2.5rem;
+  background: #000;
+  color: #fff;
+  border: 1px solid #fff;
+  text-align: left;
+  font-size: 1.2rem;
+}
+
+label {
+  width: 65%;
+  color: #fff;
+  text-align: left;
+  margin-bottom: .5rem;
+}
+
+button {
+  border: none;
+  background: #f96816;
+  font-weight: normal;
+  width: 65%;
+  color: #fff;
+  height: 2.5rem;
+  color: #fff;
+}
+
+button:hover {
+  cursor: pointer;
+}
+
+.border-color-transition-hover {
+  -webkit-transition-property: color, border-color;
+  transition-property: color, border-color;
+  -webkit-transition-duration: .3s;
+          transition-duration: .3s;
+  -webkit-transition-timing-function: ease-in;
+          transition-timing-function: ease-in;
+}
+
+.border-color-transition-hover:hover {
+  color: #f96816;
+  border-color: #f96816;
+}
+
+.plural-sight-logo {
+  text-align: center;
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+}
+
+.plural-sight-logo img {
+  display: block;
+  width: 50%;
+  margin: auto;
+}
+
+.plural-sight-form {
+  background: #000;
+  height: 100vh;
+  position: relative;
+  color: #fff;
+}
+
+.plural-sight-form .or-container {
+  width: 50%;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 2rem;
+  font-size: 1rem;
+  text-transform: uppercase;
+}
+
+.plural-sight-form .or-container hr {
+  color: white;
+  width: 40%;
+  left: 0;
+}
+
+.plural-sight-form .forgot-password-link {
+  margin-top: 3rem;
+}
+
+.plural-sight-form a {
+  margin-bottom: .5rem;
+  width: 65%;
+}
+
+.plural-sight-form .secondary-btn {
+  border: 1px solid #fff;
+  width: 50%;
+  margin: auto;
+  height: 2.5rem;
+  line-height: 2.5rem;
+  vertical-align: middle;
+  margin-top: 2rem;
+}
+
+.plural-sight-form footer {
+  position: absolute;
+  bottom: 1rem;
+  width: 65%;
+  margin-left: calc((100% - 65%)/2);
+  font-size: .9rem;
+}
+
+.plural-sight-form footer p {
+  margin-bottom: .5rem;
+}
+
+.plural-sight-form footer a {
+  color: #f96816;
+}
+
+.section-1 {
+  background-image: url("https://image.ibb.co/cO9Lxq/login-bg.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.section-1 div {
+  width: 100%;
+}
+
+.section-1 h2 {
+  text-align: center;
+  font-size: 3rem;
+  font-weight: normal;
+  margin-bottom: 2.5rem;
+}
+
+.section-1 button {
+  background: none;
+  border: 1px solid #fff;
+  font-size: 1rem;
+  width: 50%;
+  height: 2.8rem;
+  margin-left: calc((100% - 50%)/2);
+}
+/*# sourceMappingURL=style.css.map */

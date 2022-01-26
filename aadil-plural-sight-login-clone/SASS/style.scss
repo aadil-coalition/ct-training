@@ -1,0 +1,166 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:300');
+
+
+// common variables
+$black: #000;
+$white: #fff;
+$orange: #f96816;
+
+// globle style
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: 'Roboto', sans-serif;
+    display: grid;
+    grid-template-columns: 2fr 3fr;
+}
+// common tag style
+h1, h2, h3, h4 {
+    color: $white;
+}
+a { 
+    text-decoration: none;
+    color: $white;
+}
+form > * { 
+    margin: auto;
+    display: block;
+    text-align: center
+}
+input {
+ display: block;
+ width: 65%;
+ margin-bottom: 1.5rem;
+ height: 2.5rem;
+ background: $black;
+ color: $white;
+ border: 1px solid $white;
+ text-align: left;
+ font-size: 1.2rem;
+}
+label { 
+    width: 65%;
+    color: $white;
+    text-align: left;
+    margin-bottom: .5rem;
+}
+button {
+    border: none;
+    background: $orange;
+    font-weight: normal;
+    width: 65%;
+    color: $white;
+    height: 2.5rem;
+    color: $white;
+
+    &:hover {
+        cursor: pointer;
+    }
+}
+
+// utitility styles
+.border-color-transition-hover {
+    transition-property: color, border-color;
+    transition-duration: .3s;
+    transition-timing-function: ease-in; 
+    &:hover {
+        color: $orange;
+        border-color: $orange;
+    }
+}
+
+// main style starts from here.
+.plural-sight-logo {
+    text-align: center;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+
+    img {
+        display: block;
+        width: 50%;
+        margin: auto;
+    }
+}
+.plural-sight-form {
+    background: $black;
+    height: 100vh;
+    position: relative;
+    color: $white;
+    .or-container {
+        width: 50%;
+        position: relative;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 2rem;
+        font-size: 1rem;
+        text-transform: uppercase;
+        hr {
+            color: white;
+            width: 40%;
+            left: 0;
+        }
+    }
+
+
+    .forgot-password-link {
+        margin-top: 3rem;
+    }
+    a { 
+        margin-bottom: .5rem;
+        width: 65%;
+    }
+    .secondary-btn {
+        border: 1px solid $white;
+        width: 50%;
+        margin: auto;
+        height: 2.5rem;
+        line-height: 2.5rem;
+        vertical-align: middle;
+        margin-top: 2rem;
+    }
+    footer {
+        position: absolute;
+        bottom: 1rem;
+        width: 65%;
+        margin-left: calc((100% - 65%)/2);
+        font-size: .9rem;
+        p { 
+            margin-bottom: .5rem;
+        }
+        a {
+            color: $orange;
+        }
+    }
+}
+.section-1 {
+    background-image: url('https://image.ibb.co/cO9Lxq/login-bg.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 100vh;
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+    div {
+        width: 100%;
+    }
+    h2 {
+        text-align: center;
+        font-size: 3rem;
+        font-weight: normal;
+        margin-bottom: 2.5rem;
+    }
+
+    button {
+        background: none;
+        border: 1px solid  $white;
+        font-size: 1rem;        
+        width: 50%;
+        height: 2.8rem;
+        margin-left: calc((100% - 50%)/2);
+    }
+}
