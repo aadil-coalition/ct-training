@@ -1,0 +1,361 @@
+@import url("https://fonts.googleapis.com/css?family=PT+Sans");
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "PT Sans", sans-serif;
+  color: #fff;
+  text-align: center;
+}
+
+a {
+  text-decoration: none;
+  color: #fff;
+  text-transform: capitalize;
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+li {
+  list-style: none;
+}
+
+h1 {
+  font-size: 4rem;
+  margin-bottom: 1.6rem;
+}
+
+h2 {
+  font-size: 1.5rem;
+  margin-bottom: 1.6rem;
+}
+
+h3 {
+  font-size: 3rem;
+  margin-bottom: 1.6rem;
+}
+
+h4 {
+  font-size: 1.8rem;
+  margin-bottom: 1.6rem;
+}
+
+h5 {
+  font-size: 2rem;
+  color: #000;
+  margin-bottom: 1.6rem;
+}
+
+p {
+  margin-bottom: 1rem;
+  font-size: 1.3rem;
+  width: 80%;
+  margin: auto;
+}
+
+button {
+  display: block;
+  border: none;
+  color: #fff;
+  margin: auto;
+  padding: 1rem;
+  text-transform: capitalize;
+  font-size: 1rem;
+  margin-top: 1.3rem;
+  margin-bottom: 1.3rem;
+}
+
+button:hover {
+  cursor: pointer;
+  opacity: .8;
+}
+
+.red-btn {
+  background-color: #b90415;
+}
+
+.blue-btn {
+  background-color: #103063;
+}
+
+.hamberger {
+  width: 18px;
+  height: 18px;
+  position: relative;
+  margin-right: 1rem;
+  display: none;
+}
+
+.hamberger span {
+  background-color: #fff;
+  width: 100%;
+  height: 2px;
+  display: block;
+  margin-bottom: 4px;
+}
+
+.hamberger:hover {
+  cursor: pointer;
+}
+
+header nav {
+  width: 100vw;
+  height: 6vh;
+  background: #333;
+  position: fixed;
+  top: 0;
+  -webkit-transition-property: height;
+  transition-property: height;
+  -webkit-transition-duration: .3s;
+          transition-duration: .3s;
+  -webkit-transition-timing-function: ease-out;
+          transition-timing-function: ease-out;
+}
+
+header ul {
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: left;
+      -ms-flex-pack: left;
+          justify-content: left;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+header ul li {
+  padding: 1rem;
+}
+
+header ul li:hover {
+  background: #444;
+}
+
+.first-section {
+  width: 100%;
+  height: calc(100vh - 6vh);
+  background: url("../img/showcase.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position-x: center;
+  background-position-y: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.first-section div {
+  width: 80%;
+}
+
+.second-section {
+  padding: 2rem;
+  background: #333;
+}
+
+.second-section .first-section-tag-line-1 {
+  font-size: 1rem;
+  font-weight: normal;
+}
+
+.third-section {
+  padding: 2rem;
+}
+
+.third-section p {
+  color: #000;
+  margin-top: 2rem;
+}
+
+.forth-section {
+  background: url("../img/section-bg.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position-x: center;
+  background-position-y: center;
+  height: 60vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.forth-section h5 {
+  color: #fff;
+}
+
+.fifth-section {
+  background: #fff;
+  height: auto;
+  display: -ms-grid;
+  display: grid;
+  grid-gap: 20px;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+  padding-top: 3rem;
+}
+
+.fifth-section img {
+  display: block;
+  width: 550px;
+  height: 400px;
+}
+
+.fifth-section h5 {
+  font-size: 1.5rem;
+  text-align: left;
+}
+
+.fifth-section p {
+  color: #000;
+  text-align: left;
+  font-size: 1rem;
+  margin: 0;
+  margin-bottom: 2rem;
+}
+
+.fifth-section a {
+  color: #000;
+  text-align: left;
+  display: block;
+  width: 100%;
+  margin-top: 1rem;
+  color: #103063;
+  font-weight: normal;
+}
+
+footer {
+  margin: auto;
+  background: #333;
+  padding-top: 4rem;
+}
+
+footer .footer-list-item {
+  width: 80vw;
+  margin: auto;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[4];
+      grid-template-columns: repeat(4, 1fr);
+}
+
+footer .footer-list-item .list-item-container {
+  margin-right: 3rem;
+}
+
+footer .footer-list-item .list-item-container li {
+  margin-bottom: .4rem;
+  text-align: left;
+}
+
+footer h6 {
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+  text-align: left;
+  border-bottom: 0.2px solid #fff;
+  padding-bottom: .5rem;
+}
+
+footer a {
+  font-size: .9rem;
+  font-weight: normal;
+}
+
+footer .copyright {
+  width: 100%;
+  padding: 1rem;
+  background: #444;
+  margin-top: 1rem;
+  font-weight: normal;
+  font-size: 1rem;
+}
+
+@media only screen and (max-width: 600px) {
+  .nav-bar-container li {
+    display: none;
+    width: 100%;
+    text-align: left;
+  }
+  .nav-bar-container li:hover {
+    background: #333;
+    cursor: pointer;
+  }
+  .nav-bar-container li:first-child {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .nav-bar-container .hamberger {
+    display: block;
+  }
+  .first-section {
+    height: 40vh;
+  }
+  .first-section h1 {
+    font-size: 3rem;
+  }
+  .first-section p {
+    display: none;
+  }
+  .second-section img {
+    width: 100%;
+  }
+  .third-section img {
+    width: 100%;
+  }
+  .fifth-section {
+    display: block;
+  }
+  .fifth-section img {
+    width: 410px;
+    height: 300px;
+  }
+  .fifth-section div {
+    margin-top: 2rem;
+    margin-left: 2rem;
+    margin-bottom: 2rem;
+  }
+  footer {
+    padding: 0;
+  }
+  footer .footer-list-item {
+    display: none;
+  }
+}
+
+.expand-nav-menu {
+  display: block;
+  height: 35vh;
+}
+
+.expand-nav-menu .link-list-container {
+  display: block;
+}
+
+.expand-nav-menu .link-list-item {
+  display: block;
+}
+/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,317 @@
+// common variables.
+$white-color: #fff;
+$white-color-1: #f2f2f2;
+$white-color-2: #f4f4f4;
+$black-color: #000;
+$black-color-1: #262626;
+$grey-color: #ccc;
+$grey-color-1: #333;
+$grey-color-2: #616161;
+$blue-color: #0067b8;
+$my-font: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+// globle style
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body {
+    font-family: $my-font;
+    background: $white-color;
+}
+// common tag style.
+a {
+    text-decoration: none;
+    color: $blue-color;
+    text-transform: uppercase;
+    font-size: 1rem;
+    font-weight: bold;
+}
+li {
+    list-style:none;
+}
+
+h1 {
+    font-size: 2rem;
+}
+h2 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+h4, h6 {
+    font-size: 1.6rem;
+}
+h3, h5 {
+    font-size: 1.2rem;
+    margin-bottom: .8rem;
+}
+
+p {
+    margin-bottom: 1rem;
+}
+button {
+    display: block;
+    border: none;
+    font-weight: bold;
+    color: $white-color;
+    background-color: $black-color;
+    padding: 0.9rem 1.2rem;
+    margin:  auto;
+    &:hover {
+        cursor: pointer;
+        opacity: .8;
+    }
+}
+
+// common mixins.
+@mixin flex-helper($jc, $ai) {
+    display: flex;
+    justify-content: $jc;
+    align-items: $ai;
+}
+// main style starts from here.
+header {
+    @include flex-helper(left, center);
+    width: 80vw;
+    margin: auto;
+    h1 {
+        display: inline-block;
+        transform: scale(.6);
+    }
+}
+.nav-bar-container {
+    //  border: 1px solid black;
+    .link-list-container {
+        @include flex-helper(left, center);
+    }
+    .link-list-item {
+        margin-right: 1rem;
+        font-size: 14px;
+        &:hover {
+            border-bottom: 2px solid $black-color-1;
+        }
+    }
+
+    a {
+        color: $black-color;
+        font-size: 14px;
+        font-weight: normal;
+        text-transform: capitalize;
+    }
+}
+
+.surface-deal-container {
+    width: 80vw;
+    height: 50vh;
+    margin: auto;
+    background: url('https://i.ibb.co/zGSDGCL/slide1.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position-x: center;
+    background-position-y: center;  
+    @include flex-helper(center, center);
+    div {
+        margin-top: 9rem;
+    }
+    h2, p {
+        text-align: center;
+        // margin-bottom: 1.3rem;
+    }
+}
+
+.microsoft-list {
+    margin-top: 1rem;
+    width: 80vw;
+    margin: auto;
+    margin-top: 1rem;
+    img {
+        display: block;
+        margin-bottom: 1rem;
+    }
+    .list-item-container {
+        display: grid; 
+        grid-template-columns: repeat(4, 1fr);
+        grid-gap: 1rem;
+    }
+}
+
+.xBox-container {
+    height: 50vh;
+    width: 80vw;
+    margin: auto;
+    margin-top: 3rem;
+    background: url('https://i.ibb.co/tBJGPD9/xbox.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position-x: center;
+    background-position-y: center;  
+    p {
+        width: 33%;
+    }
+    button,p {
+        margin-left: 2rem;
+        margin-top: 2rem;
+    }
+    h4 {
+        padding-top: 4rem;
+        margin-left: 2rem;
+    }
+}
+
+.carbon-negative {
+    height: 50vh;
+    width: 80vw;
+    margin: auto;
+    margin-top: 3rem;
+    background: url('https://i.ibb.co/72cgtsz/carbon.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position-x: center;
+    background-position-y: center;  
+    color: $white-color;
+    @include flex-helper(left, center);
+
+    p {
+        width: 50%;
+    }
+
+    div {
+        margin-left: 2rem;
+    }
+    button {
+        background: $white-color;
+        color: $black-color;
+        margin-left: 0;
+    }
+    button, p, h6 {
+        margin-bottom: 1rem;
+    }
+}
+.social-media {
+    width: 80vw;
+    margin: auto;
+    margin-top: 3rem;
+    margin-bottom: 2rem;
+    p {
+        margin-right: 1rem;
+    }
+    @include flex-helper(left, center);
+    .social-media-list {
+        @include flex-helper(left, center);
+        .social-media-list-item {
+            margin-right: 1rem;
+            font-size: 14px;
+            &:hover {
+                border-bottom: 2px solid $black-color-1;
+            }
+        }
+    }
+}
+
+footer {
+    margin: auto;
+    background: $grey-color;
+    padding: 4rem 0;
+    a {
+        font-size: .7rem;
+        font-weight: normal;
+        color: $black-color;
+    }
+
+    h6 {
+        font-size: 1rem;
+        color: $grey-color-2;
+        margin-bottom: 1rem;
+    }
+    .footer-list-item {
+        width: 80vw;
+        margin: auto;
+        display: grid;
+        grid-template-columns: repeat(6, 1fr);
+        .list-item-container {
+            li {
+                margin-bottom: .8rem;
+            }
+        }
+    }
+
+    .horizonta-footer {
+        margin: auto;
+        margin-top: 2rem;
+        width: 80vw;
+        @include flex-helper(space-between, center);
+        h6 {
+            font-size: .8rem;
+            margin-right: 3rem;
+            font-weight: normal;
+            margin-bottom: 0;
+        }
+        li {
+            margin-right: 2rem;
+            display: inline-block;
+        }
+    }
+}
+
+// mobile style starts from here.
+@media screen and (max-width: 768px) {
+    header {
+        width: 90vw;
+    }
+    .nav-bar-container {
+        display: none;
+    }
+    .surface-deal-container {
+        width: 90vw;
+        height: 45vh;
+    }
+
+    .microsoft-list {
+        width: 90vw;
+        margin: auto;
+        margin-top: 1rem;
+        img {
+            display: block;
+            width: 100%;
+        }        
+        .list-item-container {
+            display: block; 
+            width: 90vw;
+            margin: auto;
+            .list-item {
+                margin-bottom: 1rem;
+            }
+        }
+
+    }
+    .xBox-container {
+        height: 45vh;
+        width: 90vw;
+        p {
+            display: none;            
+        }
+    }
+    .carbon-negative {
+        height: 45vh;
+        width: 90vw;
+        position: relative;
+        div {
+            position: absolute;
+            bottom: 1rem;
+        }
+        p {
+            width: 90%;
+        }
+    }
+
+    footer {
+        .footer-list-item {
+            width: 90vw;
+            display: block;
+            .list-item-container {
+                margin-bottom: 3rem;
+            }
+        }
+    }
+}

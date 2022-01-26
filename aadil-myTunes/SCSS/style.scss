@@ -1,0 +1,335 @@
+@import url('https://fonts.googleapis.com/css?family=PT+Sans');
+
+// common variables.
+$my-font: 'PT Sans', sans-serif;
+$red: #b90415;
+$light-red: #d3071b;
+$blue-color: #103063;
+$light-blue-color: #143f85;
+$dark-white-color: #f4f4f4;
+$white-color: #fff;
+$light-white-color: #eee;
+$grey-color: #333;
+$dark-grey-color: #444;
+$black-color: #000;
+$nav-height: 6vh;
+
+
+// globle style
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body {
+    font-family: $my-font;
+    color: $white-color;
+    text-align: center;
+}
+
+// common tag style.
+a {
+    text-decoration: none;
+    color: $white-color;
+    text-transform: capitalize;
+    font-size: 1rem;
+    font-weight: bold;
+}
+li {
+    list-style:none;
+}
+
+h1 {
+    font-size: 4rem;
+    margin-bottom: 1.6rem;
+}
+h2 {
+    font-size: 1.5rem;
+    margin-bottom: 1.6rem;
+}
+h3 {
+    font-size: 3rem;
+    margin-bottom: 1.6rem;
+}
+h4 {
+    font-size: 1.8rem;
+    margin-bottom: 1.6rem;
+}
+h5 {
+    font-size: 2rem;
+    color: $black-color;
+    margin-bottom: 1.6rem;
+}
+p {
+    margin-bottom: 1rem;
+    font-size: 1.3rem;
+    width: 80%;
+    margin: auto;
+}
+button {
+    display: block;
+    border: none;
+    color: $white-color;
+    margin:  auto;
+    padding: 1rem;
+    text-transform: capitalize;
+    font-size: 1rem;
+    margin-top: 1.3rem;
+    margin-bottom: 1.3rem;
+    &:hover {
+        cursor: pointer;
+        opacity: .8;
+    }
+}
+
+
+// common mixins.
+@mixin flex-helper($jc, $ai) {
+    display: flex;
+    justify-content: $jc;
+    align-items: $ai;
+}
+@mixin flex-helper-vertical($jc, $ai) {
+    display: flex;
+    flex-direction: column;
+    justify-content: $jc;
+    align-items: $ai;
+}
+// utility styles
+.red-btn {
+    background-color: $red;
+
+}
+.blue-btn {
+    background-color: $blue-color;
+}
+.hamberger {
+    width: 18px;
+    height: 18px;
+    position: relative; 
+    margin-right: 1rem;
+    display:none;
+    span {
+        background-color: $white-color;
+        width: 100%;
+        height: 2px;
+        display: block;
+        margin-bottom: 4px;
+    }
+    &:hover {
+        cursor: pointer;
+    }
+}
+// main style starts from here.
+header {
+    nav{
+        width: 100vw;
+        height: $nav-height;
+        background: $grey-color;
+        position: fixed;
+        top: 0;
+        transition-property: height;
+        transition-duration: .3s;
+        transition-timing-function: ease-out;        
+    }
+    ul {
+        height: 100%;
+        @include flex-helper(left, center);
+        li {
+            padding: 1rem;
+            &:hover {
+                background: $dark-grey-color;
+            }
+        }
+    }  
+}
+
+.first-section {
+    width: 100%;
+    height: calc(100vh - #{$nav-height}); 
+    background: url('../img/showcase.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position-x: center;
+    background-position-y: center;
+    @include flex-helper(center, center);
+
+    div {
+        width: 80%;
+    }
+}
+
+.second-section {
+    padding: 2rem;
+    background: $grey-color;
+
+    .first-section-tag-line-1 {
+        font-size: 1rem;
+        font-weight: normal;
+    }
+}
+
+.third-section {
+    padding: 2rem;
+    p {
+        color: $black-color;
+        margin-top: 2rem;
+    }
+}
+.forth-section {
+    background: url('../img/section-bg.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position-x: center;
+    background-position-y: center;
+    height: 60vh;
+    @include flex-helper(center, center);
+    h5 {
+        color: $white-color;
+    }
+}
+.fifth-section {
+    background: $white-color;
+    height: auto;
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: 1fr 1fr;
+    padding-top: 3rem;
+    img {
+        display: block;
+        width: 550px;
+        height: 400px;
+    }
+    h5 {
+        font-size: 1.5rem;
+        text-align: left;
+    }
+    p {
+        color: $black-color;
+        text-align: left;
+        font-size: 1rem;
+        margin: 0;
+        margin-bottom: 2rem;
+    }
+    a {
+        color: $black-color;
+        text-align: left;
+        display: block;
+        width: 100%;
+        margin-top: 1rem;
+        color: $blue-color;
+        font-weight: normal;
+    }
+}
+
+
+footer {
+    margin: auto;
+    background: $grey-color;
+    padding-top: 4rem;
+
+    .footer-list-item {
+        width: 80vw;
+        margin: auto;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        .list-item-container {
+            margin-right: 3rem;
+            li {
+                margin-bottom: .4rem;
+                text-align: left;
+            }
+        }
+    }
+     h6 {
+        font-size: 1.2rem;
+        margin-bottom: 1rem;
+         text-align: left;
+         border-bottom: .2px solid $white-color;
+         padding-bottom: .5rem;
+     }
+     a {
+         font-size: .9rem;
+         font-weight: normal;
+     }
+     .copyright {
+         width: 100%;
+         padding: 1rem;
+         background: $dark-grey-color;
+         margin-top: 1rem;
+         font-weight: normal;
+         font-size: 1rem;
+     }
+}
+// for mobile
+@media only screen and (max-width: 600px) {
+    .nav-bar-container {
+        li {
+            display:none;
+            width: 100%;
+            text-align: left;
+            &:hover {
+                background: $grey-color;
+                cursor: pointer;
+            }
+        }
+        li:first-child {
+            @include flex-helper(space-between, center);
+        }
+
+        .hamberger {
+            display: block;
+        }
+    }
+    .first-section {
+        height: 40vh; 
+        h1 {
+            font-size: 3rem;
+        }
+        p {
+            display: none;
+        }
+    }
+    .second-section {
+      img {
+          width: 100%;
+      }
+    }
+    .third-section {
+       img {
+          width: 100%;
+      }
+    }
+    .fifth-section {
+        display: block;
+        img {
+            width: 410px;
+            height: 300px;
+        }
+        div {
+            margin-top: 2rem;
+            margin-left: 2rem;
+            margin-bottom: 2rem;
+        }
+    }
+    footer {
+        padding: 0;
+        .footer-list-item {
+            display: none;
+        }
+    }
+}
+
+// for javascript
+.expand-nav-menu {
+    display: block;
+    height: 35vh;
+    .link-list-container {
+        display: block;
+    }
+    .link-list-item {
+        display: block;
+    }
+}
+
+
