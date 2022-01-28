@@ -189,4 +189,15 @@ button:hover {
   height: 2.8rem;
   margin-left: calc((100% - 50%)/2);
 }
+
+@media only screen and (max-width: 600px) {
+  body {
+    grid-auto-flow: column;
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+  }
+  .section-1 {
+    display: none;
+  }
+}
 /*# sourceMappingURL=style.css.map */

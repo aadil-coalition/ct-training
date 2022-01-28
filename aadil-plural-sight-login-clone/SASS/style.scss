@@ -164,3 +164,15 @@ button {
         margin-left: calc((100% - 50%)/2);
     }
 }
+
+// for mobile 
+@media only screen and (max-width: 600px) {
+    body {
+        grid-auto-flow: column;
+        grid-template-columns: 1fr;
+    }
+  .section-1 {
+      display: none;
+  }
+
+}
